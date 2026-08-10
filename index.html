@@ -1,27 +1,20 @@
 <!DOCTYPE html>
-
 <html lang="fr">
-
 <head>
-
 <meta charset="UTF-8">
-
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>ELITE PRESTIGE — Location Premium</title>
 
 <meta
-name="description"
-content="ELITE PRESTIGE — Location premium aérienne, terrestre et maritime."
-
+  name="description"
+  content="ELITE PRESTIGE — Location premium aérienne, terrestre et maritime."
 >
 
-<link
-  rel="icon"
-  href="./elite_prestige_logo_petit.png"
->
+<link rel="icon" href="./elite_prestige_logo_petit.png">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
 <link
   href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@200;300;400;500&family=Work+Sans:wght@300;400;500&display=swap"
@@ -30,27 +23,17 @@ content="ELITE PRESTIGE — Location premium aérienne, terrestre et maritime."
 
 <style>
 
-/* =========================================================
-   ELITE PRESTIGE
-   ========================================================= */
-
 :root{
-
   --bg:#080809;
-  --bg2:#0e0e10;
-  --card:#121214;
-
+  --bg2:#101012;
+  --card:#141416;
   --gold:#c9a24c;
-  --gold-light:#e5ce96;
-
+  --gold-light:#e7d19a;
   --white:#f3eee5;
-
-  --gray:#929197;
-  --gray2:#66666b;
-
+  --gray:#949399;
+  --gray2:#5f5f65;
   --line:rgba(243,238,229,.10);
-  --gold-line:rgba(201,162,76,.38);
-
+  --gold-line:rgba(201,162,76,.42);
 }
 
 *{
@@ -64,21 +47,12 @@ html{
 }
 
 body{
-
   background:var(--bg);
-
   color:var(--white);
-
-  font-family:
-    "Work Sans",
-    sans-serif;
-
+  font-family:"Work Sans",sans-serif;
   font-weight:300;
-
   line-height:1.6;
-
   -webkit-font-smoothing:antialiased;
-
 }
 
 body.modal-open{
@@ -108,141 +82,62 @@ img{
 }
 
 
-/* =========================================================
-   TYPO
-   ========================================================= */
-
-h1,
-h2,
-h3,
-h4{
-
-  font-family:"Jost",sans-serif;
-
-  font-weight:300;
-
-}
-
-h1,
-h2,
-h3{
-
-  text-transform:uppercase;
-
-  letter-spacing:.12em;
-
-}
-
-.eyebrow{
-
-  display:block;
-
-  color:var(--gold);
-
-  font-family:"Jost",sans-serif;
-
-  font-size:.68rem;
-
-  letter-spacing:.34em;
-
-  text-transform:uppercase;
-
-}
-
-
-/* =========================================================
+/* ==============================
    HEADER
-   ========================================================= */
+   ============================== */
 
 header{
-
   position:fixed;
-
   top:0;
   left:0;
   right:0;
-
   z-index:100;
-
-  border-bottom:
-    1px solid var(--line);
-
-  background:
-    rgba(8,8,9,.78);
-
+  border-bottom:1px solid var(--line);
+  background:rgba(8,8,9,.78);
   backdrop-filter:blur(16px);
-
+  -webkit-backdrop-filter:blur(16px);
 }
 
 nav{
-
   max-width:1200px;
-
   margin:auto;
-
-  padding:17px 38px;
-
+  padding:16px 38px;
   display:flex;
-
   align-items:center;
-
   justify-content:space-between;
-
 }
 
 .brand{
-
   display:flex;
-
   align-items:center;
-
-  gap:11px;
-
+  gap:12px;
 }
 
 .brand img{
-
-  width:32px;
-  height:32px;
-
+  width:38px;
+  height:38px;
   object-fit:contain;
-
 }
 
 .brand-name{
-
   font-family:"Jost",sans-serif;
-
-  font-size:.83rem;
-
-  letter-spacing:.28em;
-
+  font-size:.82rem;
+  letter-spacing:.30em;
 }
 
 .navlinks{
-
   display:flex;
-
-  gap:34px;
-
+  gap:35px;
 }
 
 .navlinks a{
-
   position:relative;
-
   color:var(--gray);
-
   font-family:"Jost",sans-serif;
-
   font-size:.67rem;
-
   letter-spacing:.18em;
-
   text-transform:uppercase;
-
   transition:.3s;
-
 }
 
 .navlinks a:hover{
@@ -250,21 +145,14 @@ nav{
 }
 
 .navlinks a::after{
-
   content:"";
-
   position:absolute;
-
   left:0;
-  bottom:-7px;
-
+  bottom:-8px;
   width:0;
   height:1px;
-
   background:var(--gold);
-
   transition:.3s;
-
 }
 
 .navlinks a:hover::after{
@@ -272,289 +160,195 @@ nav{
 }
 
 
-/* =========================================================
+/* ==============================
    HERO
-   ========================================================= */
+   ============================== */
 
 .hero{
-
   min-height:100svh;
-
   position:relative;
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   overflow:hidden;
-
   text-align:center;
-
   padding:130px 25px 100px;
 
   background:
-
     radial-gradient(
-      circle at center,
-      rgba(201,162,76,.10),
-      transparent 30%
+      circle at 50% 42%,
+      rgba(201,162,76,.11),
+      transparent 29%
     ),
-
     radial-gradient(
-      ellipse at center bottom,
+      ellipse at 50% 100%,
       rgba(201,162,76,.06),
       transparent 55%
     ),
-
     var(--bg);
-
 }
 
 .hero::before{
-
   content:"";
-
   position:absolute;
-
   width:650px;
   height:650px;
-
-  border:
-    1px solid
-    rgba(201,162,76,.06);
-
+  border:1px solid rgba(201,162,76,.065);
   border-radius:50%;
+}
 
+.hero::after{
+  content:"";
+  position:absolute;
+  width:850px;
+  height:850px;
+  border:1px solid rgba(201,162,76,.025);
+  border-radius:50%;
 }
 
 .hero-content{
-
   position:relative;
-
   z-index:2;
-
   display:flex;
-
   flex-direction:column;
-
   align-items:center;
-
 }
 
 .hero-logo{
-
   width:min(430px,82vw);
-
   margin-bottom:28px;
-
-  filter:
-    drop-shadow(
-      0 0 30px
-      rgba(201,162,76,.08)
-    );
-
+  filter:drop-shadow(0 0 30px rgba(201,162,76,.08));
 }
 
 .hero-tagline{
-
   color:var(--gray);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.7rem;
-
+  font-size:.69rem;
   letter-spacing:.38em;
-
   text-transform:uppercase;
-
 }
 
 .hero-line{
-
   width:62px;
-
   height:1px;
-
   margin:26px 0;
-
   background:var(--gold);
-
 }
 
 .hero-quote{
-
   max-width:650px;
-
-  color:#d5cfc3;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
+  color:#d7d0c4;
+  font-family:"Cormorant Garamond",serif;
   font-size:1.45rem;
-
   font-style:italic;
-
 }
 
 .hero-buttons{
-
   display:flex;
-
   flex-wrap:wrap;
-
   justify-content:center;
-
   gap:14px;
-
   margin-top:38px;
-
 }
 
 
-/* =========================================================
+/* ==============================
    BUTTONS
-   ========================================================= */
+   ============================== */
 
 .btn{
-
   display:inline-flex;
-
   align-items:center;
-
   justify-content:center;
-
-  min-height:48px;
-
-  padding:14px 29px;
-
-  border:
-    1px solid
-    var(--gold-line);
-
+  min-height:49px;
+  padding:14px 30px;
+  border:1px solid var(--gold-line);
   font-family:"Jost",sans-serif;
-
-  font-size:.64rem;
-
-  letter-spacing:.2em;
-
+  font-size:.63rem;
+  letter-spacing:.20em;
   text-transform:uppercase;
-
   cursor:pointer;
-
   transition:.3s;
-
 }
 
 .btn-gold{
-
-  color:#080809;
-
   background:var(--gold);
-
   border-color:var(--gold);
-
+  color:#080809;
 }
 
 .btn-gold:hover{
-
   background:var(--gold-light);
-
   border-color:var(--gold-light);
-
 }
 
 .btn-outline{
-
-  color:var(--white);
-
   background:transparent;
-
+  color:var(--white);
 }
 
 .btn-outline:hover{
-
   color:var(--gold-light);
-
   border-color:var(--gold);
-
 }
 
 
-/* =========================================================
+/* ==============================
    GENERAL
-   ========================================================= */
+   ============================== */
 
 .container{
-
   width:min(1160px,calc(100% - 48px));
-
   margin:auto;
-
 }
 
 section{
-
-  padding:95px 0;
-
+  padding:100px 0;
 }
 
 .section-title{
-
   text-align:center;
-
   margin-bottom:60px;
-
 }
 
-.section-title .eyebrow{
+.eyebrow{
+  display:block;
   margin-bottom:15px;
+  color:var(--gold);
+  font-family:"Jost",sans-serif;
+  font-size:.68rem;
+  letter-spacing:.34em;
+  text-transform:uppercase;
 }
 
 .section-title h2{
-
-  font-size:
-    clamp(1.5rem,3vw,2.2rem);
-
+  font-family:"Jost",sans-serif;
+  font-size:clamp(1.5rem,3vw,2.2rem);
+  font-weight:300;
+  letter-spacing:.12em;
+  text-transform:uppercase;
 }
 
 .section-title p{
-
-  max-width:620px;
-
+  max-width:650px;
   margin:18px auto 0;
-
   color:var(--gray);
-
-  font-size:.9rem;
-
+  font-size:.90rem;
 }
 
 
-/* =========================================================
-   INTRO
-   ========================================================= */
+/* ==============================
+   MAISON
+   ============================== */
 
 .intro{
-
   max-width:800px;
-
   margin:auto;
-
   text-align:center;
-
-  color:#d7d1c6;
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
+  color:#d8d1c5;
+  font-family:"Cormorant Garamond",serif;
   font-size:1.45rem;
-
   line-height:1.8;
-
 }
 
 .intro em{
@@ -562,380 +356,252 @@ section{
 }
 
 
-/* =========================================================
-   FLEET FILTERS
-   ========================================================= */
+/* ==============================
+   FILTERS
+   ============================== */
 
 .filters{
-
   display:flex;
-
   justify-content:center;
-
   flex-wrap:wrap;
-
   gap:8px;
-
-  margin:
-    -25px auto
-    55px;
-
+  margin:-22px auto 55px;
 }
 
 .filter{
-
-  padding:10px 19px;
-
-  border:
-    1px solid var(--line);
-
+  padding:10px 20px;
+  border:1px solid var(--line);
   background:transparent;
-
   color:var(--gray);
-
   font-family:"Jost",sans-serif;
-
   font-size:.61rem;
-
   letter-spacing:.18em;
-
   text-transform:uppercase;
-
   cursor:pointer;
-
   transition:.3s;
-
 }
 
 .filter:hover,
 .filter.active{
-
-  color:#080809;
-
   background:var(--gold);
-
   border-color:var(--gold);
-
+  color:#080809;
 }
 
 
-/* =========================================================
-   FLEET
-   ========================================================= */
+/* ==============================
+   FLEET GROUP
+   ============================== */
 
 .fleet-section{
-
-  margin-bottom:75px;
-
-}
-
-.fleet-section:last-child{
-  margin-bottom:0;
+  margin-bottom:78px;
 }
 
 .fleet-heading{
-
   display:flex;
-
   align-items:center;
-
-  gap:17px;
-
-  margin-bottom:24px;
-
+  gap:18px;
+  margin-bottom:25px;
 }
 
 .fleet-heading h3{
-
   color:var(--gold-light);
-
+  font-family:"Jost",sans-serif;
   font-size:.82rem;
-
+  font-weight:300;
   letter-spacing:.28em;
-
+  text-transform:uppercase;
   white-space:nowrap;
-
 }
 
 .fleet-heading-line{
-
   flex:1;
-
   height:1px;
-
   background:var(--line);
-
 }
 
 
-/* =========================================================
-   CARDS
-   ========================================================= */
+/* ==============================
+   GRID
+   ============================== */
 
 .fleet-grid{
-
   display:grid;
-
-  grid-template-columns:
-    repeat(3,1fr);
-
+  grid-template-columns:repeat(3,1fr);
   gap:2px;
-
   background:var(--line);
-
 }
+
+
+/* ==============================
+   CARD
+   ============================== */
 
 .vehicle-card{
-
   position:relative;
-
-  height:440px;
-
+  height:450px;
   overflow:hidden;
-
   background:var(--card);
-
-  transition:
-    opacity .35s,
-    transform .35s;
-
-}
-
-.vehicle-card.hidden{
-
-  display:none;
-
 }
 
 .vehicle-image{
-
   position:absolute;
-
   inset:0;
-
   background:
-
     radial-gradient(
       circle at center,
       rgba(201,162,76,.12),
-      transparent 35%
+      transparent 34%
     ),
-
     linear-gradient(
       145deg,
       #1b1b1e,
-      #0b0b0d
+      #09090b
     );
-
 }
 
 .vehicle-image img{
-
   width:100%;
   height:100%;
-
   object-fit:cover;
-
-  opacity:.78;
-
-  filter:
-    saturate(.78)
-    contrast(1.06);
-
+  object-position:center;
+  opacity:.76;
+  filter:saturate(.78) contrast(1.05);
   transition:
-    transform .8s ease,
+    transform .8s cubic-bezier(.2,.7,.2,1),
     opacity .5s ease;
-
 }
 
-.vehicle-card:hover
-.vehicle-image img{
-
+.vehicle-card:hover .vehicle-image img{
   transform:scale(1.07);
-
   opacity:.92;
-
 }
 
 .vehicle-overlay{
-
   position:absolute;
-
   inset:0;
-
   background:
-
     linear-gradient(
       to bottom,
-      rgba(5,5,7,.08),
-      rgba(5,5,7,.18) 35%,
-      rgba(5,5,7,.82) 75%,
-      rgba(5,5,7,.98)
+      rgba(5,5,7,.04),
+      rgba(5,5,7,.18) 32%,
+      rgba(5,5,7,.72) 70%,
+      rgba(5,5,7,.98) 100%
     );
+}
 
+.vehicle-card::after{
+  content:"";
+  position:absolute;
+  left:0;
+  right:0;
+  bottom:0;
+  height:2px;
+  background:linear-gradient(
+    90deg,
+    transparent,
+    var(--gold),
+    transparent
+  );
+  opacity:0;
+  transition:.4s;
+}
+
+.vehicle-card:hover::after{
+  opacity:1;
 }
 
 .vehicle-content{
-
   position:absolute;
-
   inset:0;
-
-  padding:25px;
-
+  padding:26px;
   display:flex;
-
   flex-direction:column;
-
   justify-content:space-between;
-
 }
 
 .vehicle-top{
-
   display:flex;
-
   justify-content:space-between;
-
   align-items:center;
-
 }
 
 .vehicle-category{
-
   padding:6px 10px;
-
-  border:
-    1px solid
-    rgba(229,206,150,.28);
-
-  background:
-    rgba(8,8,9,.35);
-
+  border:1px solid rgba(229,206,150,.28);
+  background:rgba(8,8,9,.35);
   color:var(--gold-light);
-
   font-family:"Jost",sans-serif;
-
   font-size:.54rem;
-
   letter-spacing:.18em;
-
   text-transform:uppercase;
-
 }
 
-.vehicle-model{
-
-  color:rgba(243,238,229,.3);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
+.vehicle-number{
+  color:rgba(243,238,229,.28);
+  font-family:"Cormorant Garamond",serif;
   font-size:1rem;
-
 }
 
 .vehicle-bottom::before{
-
   content:"";
-
   display:block;
-
-  width:42px;
-
+  width:43px;
   height:1px;
-
   margin-bottom:15px;
-
   background:var(--gold);
-
 }
 
 .vehicle-bottom h4{
-
+  font-family:"Jost",sans-serif;
   font-size:1.22rem;
-
+  font-weight:300;
   letter-spacing:.07em;
-
 }
 
-.vehicle-code{
-
+.vehicle-model{
   margin-top:4px;
-
   color:var(--gray2);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.58rem;
-
-  letter-spacing:.12em;
-
+  font-size:.57rem;
+  letter-spacing:.13em;
 }
 
 .vehicle-price{
-
-  margin-top:9px;
-
+  margin-top:10px;
   color:var(--gray);
-
-  font-size:.73rem;
-
+  font-size:.72rem;
 }
 
 .vehicle-price strong{
-
   color:var(--gold-light);
-
   font-weight:400;
-
 }
 
 .vehicle-actions{
-
-  margin-top:19px;
-
+  margin-top:20px;
 }
 
 .vehicle-button{
-
   display:inline-flex;
-
   align-items:center;
-
   gap:9px;
-
-  border:0;
-
   padding:0;
-
+  border:0;
   background:none;
-
   color:var(--white);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.59rem;
-
+  font-size:.58rem;
   letter-spacing:.17em;
-
   text-transform:uppercase;
-
   cursor:pointer;
-
 }
 
 .vehicle-button span{
-
   width:22px;
-
   height:1px;
-
   background:var(--gold);
-
   transition:.3s;
-
 }
 
 .vehicle-button:hover{
@@ -947,440 +613,261 @@ section{
 }
 
 
-/* =========================================================
-   ABOUT FLEET
-   ========================================================= */
-
-.fleet-note{
-
-  margin-top:35px;
-
-  text-align:center;
-
-  color:var(--gray2);
-
-  font-family:
-    "Cormorant Garamond",
-    serif;
-
-  font-size:.9rem;
-
-  font-style:italic;
-
-}
-
-
-/* =========================================================
+/* ==============================
    RESERVATION
-   ========================================================= */
+   ============================== */
 
 .reservation{
-
   display:grid;
-
-  grid-template-columns:
-    .8fr 1.2fr;
-
+  grid-template-columns:.8fr 1.2fr;
   gap:75px;
-
 }
 
 .reservation-copy h3{
-
-  margin-bottom:17px;
-
-  font-size:1.1rem;
-
+  margin-bottom:18px;
+  font-family:"Jost",sans-serif;
+  font-size:1.08rem;
+  font-weight:300;
+  letter-spacing:.08em;
+  text-transform:uppercase;
 }
 
 .reservation-copy p{
-
   color:var(--gray);
-
-  font-size:.9rem;
-
+  font-size:.90rem;
   line-height:1.8;
-
 }
 
 .contact-details{
-
   margin-top:30px;
-
 }
 
 .contact-item{
-
   display:flex;
-
   justify-content:space-between;
-
   gap:20px;
-
   padding:15px 0;
-
-  border-bottom:
-    1px solid var(--line);
-
+  border-bottom:1px solid var(--line);
 }
 
 .contact-item span:first-child{
-
   color:var(--gray);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.6rem;
-
+  font-size:.60rem;
   letter-spacing:.17em;
-
   text-transform:uppercase;
-
 }
 
 .contact-item span:last-child{
-
   color:var(--gold-light);
-
   font-size:.72rem;
-
   text-align:right;
-
 }
 
 
-/* =========================================================
+/* ==============================
    FORM
-   ========================================================= */
+   ============================== */
 
 .form{
-
   display:grid;
-
   gap:17px;
-
 }
 
 .field{
-
   display:grid;
-
   gap:7px;
-
 }
 
 .field label{
-
   color:var(--gray);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.6rem;
-
+  font-size:.60rem;
   letter-spacing:.18em;
-
   text-transform:uppercase;
-
 }
 
 .field input,
 .field select,
 .field textarea{
-
   width:100%;
-
   padding:14px 15px;
-
-  border:
-    1px solid var(--line);
-
+  border:1px solid var(--line);
   outline:none;
-
   background:#111113;
-
   color:var(--white);
-
   font-size:.88rem;
-
   transition:.25s;
-
 }
 
 .field input:focus,
 .field select:focus,
 .field textarea:focus{
-
   border-color:var(--gold);
-
 }
 
 .field textarea{
-
   min-height:115px;
-
   resize:vertical;
-
 }
 
 .form .btn{
-
   justify-self:start;
-
   margin-top:4px;
-
 }
 
 
-/* =========================================================
+/* ==============================
    FOOTER
-   ========================================================= */
+   ============================== */
 
 footer{
-
-  padding:50px 20px;
-
-  border-top:
-    1px solid var(--line);
-
+  padding:55px 20px;
+  border-top:1px solid var(--line);
   text-align:center;
-
 }
 
 .footer-logo{
-
-  width:80px;
-
-  margin:
-    0 auto 18px;
-
+  width:100px;
+  margin:0 auto 18px;
 }
 
 footer p{
-
   color:var(--gray2);
-
   font-family:"Jost",sans-serif;
-
   font-size:.61rem;
-
   letter-spacing:.15em;
-
   text-transform:uppercase;
-
 }
 
 footer .copyright{
-
   margin-top:9px;
-
   color:#454549;
-
 }
 
 
-/* =========================================================
+/* ==============================
    MODAL
-   ========================================================= */
+   ============================== */
 
 .modal{
-
   position:fixed;
-
   inset:0;
-
   z-index:500;
-
   display:flex;
-
   align-items:center;
-
   justify-content:center;
-
   padding:25px;
-
-  background:
-    rgba(0,0,0,.82);
-
+  background:rgba(0,0,0,.82);
   backdrop-filter:blur(10px);
-
+  -webkit-backdrop-filter:blur(10px);
   opacity:0;
-
   visibility:hidden;
-
   transition:.3s;
-
 }
 
 .modal.open{
-
   opacity:1;
-
   visibility:visible;
-
 }
 
 .modal-box{
-
   position:relative;
-
   width:min(680px,100%);
-
   max-height:90vh;
-
   overflow:auto;
-
   padding:45px;
-
-  border:
-    1px solid var(--gold-line);
-
+  border:1px solid var(--gold-line);
   background:#111113;
-
-  transform:
-    translateY(20px);
-
+  transform:translateY(20px);
   transition:.35s;
-
 }
 
 .modal.open .modal-box{
-
-  transform:
-    translateY(0);
-
+  transform:translateY(0);
 }
 
 .modal-close{
-
   position:absolute;
-
   top:15px;
   right:17px;
-
   width:36px;
   height:36px;
-
-  border:
-    1px solid var(--line);
-
+  border:1px solid var(--line);
   background:transparent;
-
   color:var(--gray);
-
   cursor:pointer;
-
   font-size:1.2rem;
-
 }
 
 .modal-close:hover{
-
   color:var(--gold-light);
-
   border-color:var(--gold);
-
 }
 
 .modal-category{
-
   color:var(--gold);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.6rem;
-
+  font-size:.60rem;
   letter-spacing:.22em;
-
   text-transform:uppercase;
-
 }
 
 .modal h2{
-
   margin-top:8px;
-
-  font-size:
-    clamp(1.5rem,4vw,2.25rem);
-
+  font-family:"Jost",sans-serif;
+  font-size:clamp(1.5rem,4vw,2.25rem);
+  font-weight:300;
+  letter-spacing:.10em;
+  text-transform:uppercase;
 }
 
 .modal-line{
-
   width:50px;
-
   height:1px;
-
   margin:20px 0;
-
   background:var(--gold);
-
 }
 
 .modal p{
-
   color:var(--gray);
-
-  font-size:.9rem;
-
+  font-size:.90rem;
   line-height:1.8;
-
 }
 
-.modal-code{
-
+.modal-model{
   margin-top:20px;
-
   padding:14px;
-
-  border:
-    1px solid var(--line);
-
+  border:1px solid var(--line);
   color:var(--gray2);
-
   font-family:"Jost",sans-serif;
-
   font-size:.65rem;
-
   letter-spacing:.13em;
-
 }
 
 .modal-price{
-
   margin-top:15px;
-
   color:var(--gold-light);
-
   font-family:"Jost",sans-serif;
-
-  font-size:.8rem;
-
+  font-size:.80rem;
 }
 
 .modal-buttons{
-
   display:flex;
-
   flex-wrap:wrap;
-
   gap:12px;
-
   margin-top:25px;
-
 }
 
 
-/* =========================================================
+/* ==============================
    RESPONSIVE
-   ========================================================= */
+   ============================== */
 
 @media(max-width:950px){
 
   .fleet-grid{
-
-    grid-template-columns:
-      repeat(2,1fr);
-
+    grid-template-columns:repeat(2,1fr);
   }
 
 }
@@ -1388,11 +875,8 @@ footer .copyright{
 @media(max-width:820px){
 
   .reservation{
-
     grid-template-columns:1fr;
-
     gap:50px;
-
   }
 
 }
@@ -1408,160 +892,92 @@ footer .copyright{
 @media(max-width:620px){
 
   .container{
-
-    width:
-      calc(100% - 36px);
-
+    width:calc(100% - 36px);
   }
 
   nav{
-
-    padding:
-      15px 20px;
-
+    padding:14px 20px;
   }
 
   .hero{
-
-    padding:
-      120px 20px 90px;
-
+    padding:120px 20px 90px;
   }
 
   .hero-logo{
-
     width:88vw;
-
   }
 
   .hero-tagline{
-
+    max-width:330px;
     font-size:.58rem;
-
-    letter-spacing:.25em;
-
     line-height:1.8;
-
+    letter-spacing:.25em;
   }
 
   .hero-quote{
-
-    font-size:1.2rem;
-
+    font-size:1.20rem;
   }
 
   .fleet-grid{
-
     grid-template-columns:1fr;
-
   }
 
   .vehicle-card{
-
-    height:410px;
-
+    height:415px;
   }
 
   .reservation{
-
     gap:40px;
-
   }
 
   .modal-box{
-
-    padding:
-      38px 24px;
-
-  }
-
-}
-
-
-/* =========================================================
-   ACCESSIBILITY
-   ========================================================= */
-
-@media(prefers-reduced-motion:reduce){
-
-  *,
-  *::before,
-  *::after{
-
-    scroll-behavior:auto !important;
-
-    transition:none !important;
-
-    animation:none !important;
-
+    padding:38px 24px;
   }
 
 }
 
 </style>
-
 </head>
+
 
 <body>
 
-<!-- ======================================================
-     HEADER
-     ====================================================== -->
 
 <header>
 
 <nav>
 
-<a
-href="#"
-class="brand"
+<a href="#" class="brand">
 
->
-
-```
 <img
   src="./elite_prestige_logo_petit.png"
   alt="Elite Prestige"
 >
 
 <span class="brand-name">
-  ELITE&nbsp;PRESTIGE
+ELITE&nbsp;PRESTIGE
 </span>
-```
 
-  </a>
-
-  <div class="navlinks">
-
-```
-<a href="#maison">
-  La Maison
 </a>
 
-<a href="#flotte">
-  La Flotte
-</a>
 
-<a href="#reservation">
-  Réserver
-</a>
-```
+<div class="navlinks">
 
-  </div>
+<a href="#maison">La Maison</a>
+<a href="#flotte">La Flotte</a>
+<a href="#reservation">Réserver</a>
+
+</div>
 
 </nav>
 
 </header>
 
-<!-- ======================================================
-     HERO
-     ====================================================== -->
 
 <section class="hero">
 
-  <div class="hero-content">
+<div class="hero-content">
 
-```
 <img
   src="./elite_prestige_logo_petit.png"
   alt="Elite Prestige"
@@ -1569,159 +985,129 @@ class="brand"
 >
 
 <p class="hero-tagline">
-  Aérien · Terrestre · Maritime
+Aérien · Terrestre · Maritime
 </p>
 
 <div class="hero-line"></div>
 
 <p class="hero-quote">
-  « Le prestige ne se loue pas, il se vit. »
+« Le prestige ne se loue pas, il se vit. »
 </p>
 
 <div class="hero-buttons">
 
-  <a
-    href="#flotte"
-    class="btn btn-gold"
-  >
-    Découvrir la flotte
-  </a>
+<a
+  href="#flotte"
+  class="btn btn-gold"
+>
+Découvrir la flotte
+</a>
 
-  <a
-    href="#reservation"
-    class="btn btn-outline"
-  >
-    Réserver
-  </a>
+<a
+  href="#reservation"
+  class="btn btn-outline"
+>
+Réserver
+</a>
 
 </div>
-```
 
-  </div>
+</div>
 
 </section>
 
+
 <main>
 
-<!-- ======================================================
-     LA MAISON
-     ====================================================== -->
 
 <section id="maison">
 
-  <div class="container">
+<div class="container">
 
-```
 <div class="section-title">
 
-  <span class="eyebrow">
-    La Maison
-  </span>
+<span class="eyebrow">
+La Maison
+</span>
 
-  <h2>
-    Une exigence, trois éléments
-  </h2>
+<h2>
+Une exigence, trois éléments
+</h2>
 
 </div>
 
 
 <p class="intro">
 
-  ELITE PRESTIGE imagine chaque déplacement comme
-  une expérience à part entière.
+ELITE PRESTIGE imagine chaque déplacement comme
+une expérience à part entière.
 
-  Une sélection de véhicules terrestres,
-  d'appareils aériens et d'embarcations pensée
-  pour celles et ceux qui recherchent
-  <em>l'élégance, la discrétion et l'exclusivité.</em>
+Une sélection de véhicules terrestres,
+d'appareils aériens et d'embarcations pensée
+pour celles et ceux qui recherchent
+<em>l'élégance, la discrétion et l'exclusivité.</em>
 
 </p>
-```
 
-  </div>
+</div>
 
 </section>
 
-<!-- ======================================================
-     FLOTTE
-     ====================================================== -->
 
 <section id="flotte">
 
 <div class="container">
 
-  <div class="section-title">
+<div class="section-title">
 
-```
 <span class="eyebrow">
-  La Flotte
+La Flotte
 </span>
 
 <h2>
-  L'excellence en mouvement
+L'excellence en mouvement
 </h2>
 
 <p>
-  Découvrez notre sélection de modèles FiveM.
-  Chaque véhicule dispose de sa fiche dédiée.
+Une sélection de modèles FiveM pour vos déplacements
+les plus prestigieux.
 </p>
-```
 
-  </div>
+</div>
 
-  <!-- FILTRES -->
 
-  <div class="filters">
+<div class="filters">
 
-```
-<button
-  class="filter active"
-  data-filter="all"
->
-  Tous
+<button class="filter active" data-filter="all">
+Tous
 </button>
 
-<button
-  class="filter"
-  data-filter="air"
->
-  Aérien
+<button class="filter" data-filter="air">
+Aérien
 </button>
 
-<button
-  class="filter"
-  data-filter="land"
->
-  Terrestre
+<button class="filter" data-filter="land">
+Terrestre
 </button>
 
-<button
-  class="filter"
-  data-filter="sea"
->
-  Maritime
+<button class="filter" data-filter="sea">
+Maritime
 </button>
-```
 
-  </div>
+</div>
 
-  <!-- ====================================================
-       AÉRIEN
-       ==================================================== -->
 
-  <div
-    class="fleet-section"
-    data-group="air"
-  >
+<!-- =========================
+     AÉRIEN
+     ========================= -->
 
-```
+<div class="fleet-section" data-group="air">
+
 <div class="fleet-heading">
 
-  <h3>
-    Aérien
-  </h3>
+<h3>Aérien</h3>
 
-  <div class="fleet-heading-line"></div>
+<div class="fleet-heading-line"></div>
 
 </div>
 
@@ -1729,383 +1115,322 @@ class="brand"
 <div class="fleet-grid">
 
 
-  <!-- VOLATUS -->
+<article class="vehicle-card" data-category="air">
 
-  <article
-    class="vehicle-card"
-    data-category="air"
-    data-name="Volatus"
-    data-model="volatus"
-  >
+<div class="vehicle-image">
 
-    <div class="vehicle-image">
+<img
+src="https://cdn.fivemetstore.com/carros/volatus.png"
+alt="Volatus"
+loading="lazy"
+>
 
-      <img
-        src="./images/volatus.jpg"
-        alt="Volatus"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-overlay"></div>
 
-      <div class="vehicle-overlay"></div>
+</div>
 
-    </div>
+<div class="vehicle-content">
 
-    <div class="vehicle-content">
+<div class="vehicle-top">
 
-      <div class="vehicle-top">
+<span class="vehicle-category">
+Aérien
+</span>
 
-        <span class="vehicle-category">
-          Aérien
-        </span>
+<span class="vehicle-number">
+01
+</span>
 
-        <span class="vehicle-model">
-          01
-        </span>
+</div>
 
-      </div>
+<div class="vehicle-bottom">
 
-      <div class="vehicle-bottom">
+<h4>Volatus</h4>
 
-        <h4>
-          Volatus
-        </h4>
+<div class="vehicle-model">
+MODEL · VOLATUS
+</div>
 
-        <div class="vehicle-code">
-          MODEL · VOLATUS
-        </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-actions">
+<button
+class="vehicle-button"
+onclick="openVehicle('Volatus','Aérien','volatus')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Volatus','Aérien','volatus')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</article>
 
-  </article>
 
+<article class="vehicle-card" data-category="air">
 
-  <!-- SWIFT DELUXE -->
+<div class="vehicle-image">
 
-  <article
-    class="vehicle-card"
-    data-category="air"
-    data-name="Swift Deluxe"
-    data-model="swift2"
-  >
+<img
+src="https://cdn.fivemetstore.com/carros/swift2.png"
+alt="Swift Deluxe"
+loading="lazy"
+>
 
-    <div class="vehicle-image">
+<div class="vehicle-overlay"></div>
 
-      <img
-        src="./images/swift2.jpg"
-        alt="Swift Deluxe"
-        onerror="this.style.display='none'"
-      >
+</div>
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-content">
 
-    </div>
+<div class="vehicle-top">
 
-    <div class="vehicle-content">
+<span class="vehicle-category">
+Aérien
+</span>
 
-      <div class="vehicle-top">
+<span class="vehicle-number">
+02
+</span>
 
-        <span class="vehicle-category">
-          Aérien
-        </span>
+</div>
 
-        <span class="vehicle-model">
-          02
-        </span>
+<div class="vehicle-bottom">
 
-      </div>
+<h4>Swift Deluxe</h4>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-model">
+MODEL · SWIFT2
+</div>
 
-        <h4>
-          Swift Deluxe
-        </h4>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · SWIFT2
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Swift Deluxe','Aérien','swift2')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Swift Deluxe','Aérien','swift2')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</article>
 
-    </div>
 
-  </article>
+<article class="vehicle-card" data-category="air">
 
+<div class="vehicle-image">
 
-  <!-- LUXOR DELUXE -->
+<img
+src="https://cdn.fivemetstore.com/carros/luxor2.png"
+alt="Luxor Deluxe"
+loading="lazy"
+>
 
-  <article
-    class="vehicle-card"
-    data-category="air"
-    data-name="Luxor Deluxe"
-    data-model="luxor2"
-  >
+<div class="vehicle-overlay"></div>
 
-    <div class="vehicle-image">
+</div>
 
-      <img
-        src="./images/luxor2.jpg"
-        alt="Luxor Deluxe"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-content">
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-top">
 
-    </div>
+<span class="vehicle-category">
+Aérien
+</span>
 
-    <div class="vehicle-content">
+<span class="vehicle-number">
+03
+</span>
 
-      <div class="vehicle-top">
+</div>
 
-        <span class="vehicle-category">
-          Aérien
-        </span>
+<div class="vehicle-bottom">
 
-        <span class="vehicle-model">
-          03
-        </span>
+<h4>Luxor Deluxe</h4>
 
-      </div>
+<div class="vehicle-model">
+MODEL · LUXOR2
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <h4>
-          Luxor Deluxe
-        </h4>
+<div class="vehicle-actions">
 
-        <div class="vehicle-code">
-          MODEL · LUXOR2
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Luxor Deluxe','Aérien','luxor2')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Luxor Deluxe','Aérien','luxor2')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</article>
 
-      </div>
 
-    </div>
+<article class="vehicle-card" data-category="air">
 
-  </article>
+<div class="vehicle-image">
 
+<img
+src="https://cdn.fivemetstore.com/carros/shamal.png"
+alt="Shamal"
+loading="lazy"
+>
 
-  <!-- SHAMAL -->
+<div class="vehicle-overlay"></div>
 
-  <article
-    class="vehicle-card"
-    data-category="air"
-    data-name="Shamal"
-    data-model="shamal"
-  >
+</div>
 
-    <div class="vehicle-image">
+<div class="vehicle-content">
 
-      <img
-        src="./images/shamal.jpg"
-        alt="Shamal"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-top">
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-category">
+Aérien
+</span>
 
-    </div>
+<span class="vehicle-number">
+04
+</span>
 
-    <div class="vehicle-content">
+</div>
 
-      <div class="vehicle-top">
+<div class="vehicle-bottom">
 
-        <span class="vehicle-category">
-          Aérien
-        </span>
+<h4>Shamal</h4>
 
-        <span class="vehicle-model">
-          04
-        </span>
+<div class="vehicle-model">
+MODEL · SHAMAL
+</div>
 
-      </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-actions">
 
-        <h4>
-          Shamal
-        </h4>
+<button
+class="vehicle-button"
+onclick="openVehicle('Shamal','Aérien','shamal')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-code">
-          MODEL · SHAMAL
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Shamal','Aérien','shamal')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</article>
 
-        </div>
 
-      </div>
+<article class="vehicle-card" data-category="air">
 
-    </div>
+<div class="vehicle-image">
 
-  </article>
+<img
+src="https://cdn.fivemetstore.com/carros/vestra.png"
+alt="Vestra"
+loading="lazy"
+>
 
+<div class="vehicle-overlay"></div>
 
-  <!-- VESTRA -->
+</div>
 
-  <article
-    class="vehicle-card"
-    data-category="air"
-    data-name="Vestra"
-    data-model="vestra"
-  >
+<div class="vehicle-content">
 
-    <div class="vehicle-image">
+<div class="vehicle-top">
 
-      <img
-        src="./images/vestra.jpg"
-        alt="Vestra"
-        onerror="this.style.display='none'"
-      >
+<span class="vehicle-category">
+Aérien
+</span>
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-number">
+05
+</span>
 
-    </div>
+</div>
 
-    <div class="vehicle-content">
+<div class="vehicle-bottom">
 
-      <div class="vehicle-top">
+<h4>Vestra</h4>
 
-        <span class="vehicle-category">
-          Aérien
-        </span>
+<div class="vehicle-model">
+MODEL · VESTRA
+</div>
 
-        <span class="vehicle-model">
-          05
-        </span>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      </div>
+<div class="vehicle-actions">
 
-      <div class="vehicle-bottom">
+<button
+class="vehicle-button"
+onclick="openVehicle('Vestra','Aérien','vestra')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <h4>
-          Vestra
-        </h4>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · VESTRA
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
-
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Vestra','Aérien','vestra')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </article>
+</article>
 
 
 </div>
-```
 
-  </div>
+</div>
 
-  <!-- ====================================================
-       TERRESTRE
-       ==================================================== -->
 
-  <div
-    class="fleet-section"
-    data-group="land"
-  >
+<!-- =========================
+     TERRESTRE
+     ========================= -->
 
-```
+<div class="fleet-section" data-group="land">
+
 <div class="fleet-heading">
 
-  <h3>
-    Terrestre
-  </h3>
+<h3>Terrestre</h3>
 
-  <div class="fleet-heading-line"></div>
+<div class="fleet-heading-line"></div>
 
 </div>
 
@@ -2113,383 +1438,322 @@ class="brand"
 <div class="fleet-grid">
 
 
-  <!-- THRAX -->
+<article class="vehicle-card" data-category="land">
 
-  <article
-    class="vehicle-card"
-    data-category="land"
-    data-name="Thrax"
-    data-model="thrax"
-  >
+<div class="vehicle-image">
 
-    <div class="vehicle-image">
+<img
+src="https://cdn.fivemetstore.com/carros/thrax.png"
+alt="Thrax"
+loading="lazy"
+>
 
-      <img
-        src="./images/thrax.jpg"
-        alt="Thrax"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-overlay"></div>
 
-      <div class="vehicle-overlay"></div>
+</div>
 
-    </div>
+<div class="vehicle-content">
 
-    <div class="vehicle-content">
+<div class="vehicle-top">
 
-      <div class="vehicle-top">
+<span class="vehicle-category">
+Terrestre
+</span>
 
-        <span class="vehicle-category">
-          Terrestre
-        </span>
+<span class="vehicle-number">
+01
+</span>
 
-        <span class="vehicle-model">
-          01
-        </span>
+</div>
 
-      </div>
+<div class="vehicle-bottom">
 
-      <div class="vehicle-bottom">
+<h4>Thrax</h4>
 
-        <h4>
-          Thrax
-        </h4>
+<div class="vehicle-model">
+MODEL · THRAX
+</div>
 
-        <div class="vehicle-code">
-          MODEL · THRAX
-        </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-actions">
+<button
+class="vehicle-button"
+onclick="openVehicle('Thrax','Terrestre','thrax')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Thrax','Terrestre','thrax')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</article>
 
-  </article>
 
+<article class="vehicle-card" data-category="land">
 
-  <!-- ENTITY MT -->
+<div class="vehicle-image">
 
-  <article
-    class="vehicle-card"
-    data-category="land"
-    data-name="Entity MT"
-    data-model="entity3"
-  >
+<img
+src="https://cdn.fivemetstore.com/carros/entity3.png"
+alt="Entity MT"
+loading="lazy"
+>
 
-    <div class="vehicle-image">
+<div class="vehicle-overlay"></div>
 
-      <img
-        src="./images/entity3.jpg"
-        alt="Entity MT"
-        onerror="this.style.display='none'"
-      >
+</div>
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-content">
 
-    </div>
+<div class="vehicle-top">
 
-    <div class="vehicle-content">
+<span class="vehicle-category">
+Terrestre
+</span>
 
-      <div class="vehicle-top">
+<span class="vehicle-number">
+02
+</span>
 
-        <span class="vehicle-category">
-          Terrestre
-        </span>
+</div>
 
-        <span class="vehicle-model">
-          02
-        </span>
+<div class="vehicle-bottom">
 
-      </div>
+<h4>Entity MT</h4>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-model">
+MODEL · ENTITY3
+</div>
 
-        <h4>
-          Entity MT
-        </h4>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · ENTITY3
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Entity MT','Terrestre','entity3')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Entity MT','Terrestre','entity3')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</article>
 
-    </div>
 
-  </article>
+<article class="vehicle-card" data-category="land">
 
+<div class="vehicle-image">
 
-  <!-- VIRTUE -->
+<img
+src="https://cdn.fivemetstore.com/carros/virtue.png"
+alt="Virtue"
+loading="lazy"
+>
 
-  <article
-    class="vehicle-card"
-    data-category="land"
-    data-name="Virtue"
-    data-model="virtue"
-  >
+<div class="vehicle-overlay"></div>
 
-    <div class="vehicle-image">
+</div>
 
-      <img
-        src="./images/virtue.jpg"
-        alt="Virtue"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-content">
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-top">
 
-    </div>
+<span class="vehicle-category">
+Terrestre
+</span>
 
-    <div class="vehicle-content">
+<span class="vehicle-number">
+03
+</span>
 
-      <div class="vehicle-top">
+</div>
 
-        <span class="vehicle-category">
-          Terrestre
-        </span>
+<div class="vehicle-bottom">
 
-        <span class="vehicle-model">
-          03
-        </span>
+<h4>Virtue</h4>
 
-      </div>
+<div class="vehicle-model">
+MODEL · VIRTUE
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <h4>
-          Virtue
-        </h4>
+<div class="vehicle-actions">
 
-        <div class="vehicle-code">
-          MODEL · VIRTUE
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Virtue','Terrestre','virtue')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Virtue','Terrestre','virtue')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</article>
 
-      </div>
 
-    </div>
+<article class="vehicle-card" data-category="land">
 
-  </article>
+<div class="vehicle-image">
 
+<img
+src="https://cdn.fivemetstore.com/carros/torero2.png"
+alt="Torero XO"
+loading="lazy"
+>
 
-  <!-- TORERO XO -->
+<div class="vehicle-overlay"></div>
 
-  <article
-    class="vehicle-card"
-    data-category="land"
-    data-name="Torero XO"
-    data-model="torero2"
-  >
+</div>
 
-    <div class="vehicle-image">
+<div class="vehicle-content">
 
-      <img
-        src="./images/torero2.jpg"
-        alt="Torero XO"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-top">
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-category">
+Terrestre
+</span>
 
-    </div>
+<span class="vehicle-number">
+04
+</span>
 
-    <div class="vehicle-content">
+</div>
 
-      <div class="vehicle-top">
+<div class="vehicle-bottom">
 
-        <span class="vehicle-category">
-          Terrestre
-        </span>
+<h4>Torero XO</h4>
 
-        <span class="vehicle-model">
-          04
-        </span>
+<div class="vehicle-model">
+MODEL · TORERO2
+</div>
 
-      </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-actions">
 
-        <h4>
-          Torero XO
-        </h4>
+<button
+class="vehicle-button"
+onclick="openVehicle('Torero XO','Terrestre','torero2')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-code">
-          MODEL · TORERO2
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Torero XO','Terrestre','torero2')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</article>
 
-        </div>
 
-      </div>
+<article class="vehicle-card" data-category="land">
 
-    </div>
+<div class="vehicle-image">
 
-  </article>
+<img
+src="https://cdn.fivemetstore.com/carros/turismo3.png"
+alt="Turismo Omaggio"
+loading="lazy"
+>
 
+<div class="vehicle-overlay"></div>
 
-  <!-- TURISMO OMAGGIO -->
+</div>
 
-  <article
-    class="vehicle-card"
-    data-category="land"
-    data-name="Turismo Omaggio"
-    data-model="turismo3"
-  >
+<div class="vehicle-content">
 
-    <div class="vehicle-image">
+<div class="vehicle-top">
 
-      <img
-        src="./images/turismo3.jpg"
-        alt="Turismo Omaggio"
-        onerror="this.style.display='none'"
-      >
+<span class="vehicle-category">
+Terrestre
+</span>
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-number">
+05
+</span>
 
-    </div>
+</div>
 
-    <div class="vehicle-content">
+<div class="vehicle-bottom">
 
-      <div class="vehicle-top">
+<h4>Turismo Omaggio</h4>
 
-        <span class="vehicle-category">
-          Terrestre
-        </span>
+<div class="vehicle-model">
+MODEL · TURISMO3
+</div>
 
-        <span class="vehicle-model">
-          05
-        </span>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      </div>
+<div class="vehicle-actions">
 
-      <div class="vehicle-bottom">
+<button
+class="vehicle-button"
+onclick="openVehicle('Turismo Omaggio','Terrestre','turismo3')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <h4>
-          Turismo Omaggio
-        </h4>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · TURISMO3
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
-
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Turismo Omaggio','Terrestre','turismo3')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </article>
+</article>
 
 
 </div>
-```
 
-  </div>
+</div>
 
-  <!-- ====================================================
-       MARITIME
-       ==================================================== -->
 
-  <div
-    class="fleet-section"
-    data-group="sea"
-  >
+<!-- =========================
+     MARITIME
+     ========================= -->
 
-```
+<div class="fleet-section" data-group="sea">
+
 <div class="fleet-heading">
 
-  <h3>
-    Maritime
-  </h3>
+<h3>Maritime</h3>
 
-  <div class="fleet-heading-line"></div>
+<div class="fleet-heading-line"></div>
 
 </div>
 
@@ -2497,624 +1761,512 @@ class="brand"
 <div class="fleet-grid">
 
 
-  <!-- TORO -->
+<article class="vehicle-card" data-category="sea">
 
-  <article
-    class="vehicle-card"
-    data-category="sea"
-    data-name="Toro"
-    data-model="toro"
-  >
+<div class="vehicle-image">
 
-    <div class="vehicle-image">
+<img
+src="https://cdn.fivemetstore.com/carros/toro.png"
+alt="Toro"
+loading="lazy"
+>
 
-      <img
-        src="./images/toro.jpg"
-        alt="Toro"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-overlay"></div>
 
-      <div class="vehicle-overlay"></div>
+</div>
 
-    </div>
+<div class="vehicle-content">
 
-    <div class="vehicle-content">
+<div class="vehicle-top">
 
-      <div class="vehicle-top">
+<span class="vehicle-category">
+Maritime
+</span>
 
-        <span class="vehicle-category">
-          Maritime
-        </span>
+<span class="vehicle-number">
+01
+</span>
 
-        <span class="vehicle-model">
-          01
-        </span>
+</div>
 
-      </div>
+<div class="vehicle-bottom">
 
-      <div class="vehicle-bottom">
+<h4>Toro</h4>
 
-        <h4>
-          Toro
-        </h4>
+<div class="vehicle-model">
+MODEL · TORO
+</div>
 
-        <div class="vehicle-code">
-          MODEL · TORO
-        </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-actions">
+<button
+class="vehicle-button"
+onclick="openVehicle('Toro','Maritime','toro')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Toro','Maritime','toro')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</div>
 
-    </div>
+</article>
 
-  </article>
 
+<article class="vehicle-card" data-category="sea">
 
-  <!-- SPEEDER -->
+<div class="vehicle-image">
 
-  <article
-    class="vehicle-card"
-    data-category="sea"
-    data-name="Speeder"
-    data-model="speeder"
-  >
+<img
+src="https://cdn.fivemetstore.com/carros/speeder.png"
+alt="Speeder"
+loading="lazy"
+>
 
-    <div class="vehicle-image">
+<div class="vehicle-overlay"></div>
 
-      <img
-        src="./images/speeder.jpg"
-        alt="Speeder"
-        onerror="this.style.display='none'"
-      >
+</div>
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-content">
 
-    </div>
+<div class="vehicle-top">
 
-    <div class="vehicle-content">
+<span class="vehicle-category">
+Maritime
+</span>
 
-      <div class="vehicle-top">
+<span class="vehicle-number">
+02
+</span>
 
-        <span class="vehicle-category">
-          Maritime
-        </span>
+</div>
 
-        <span class="vehicle-model">
-          02
-        </span>
+<div class="vehicle-bottom">
 
-      </div>
+<h4>Speeder</h4>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-model">
+MODEL · SPEEDER
+</div>
 
-        <h4>
-          Speeder
-        </h4>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · SPEEDER
-        </div>
+<div class="vehicle-actions">
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Speeder','Maritime','speeder')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Speeder','Maritime','speeder')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</div>
 
-      </div>
+</article>
 
-    </div>
 
-  </article>
+<article class="vehicle-card" data-category="sea">
 
+<div class="vehicle-image">
 
-  <!-- SQUALO -->
+<img
+src="https://cdn.fivemetstore.com/carros/squalo.png"
+alt="Squalo"
+loading="lazy"
+>
 
-  <article
-    class="vehicle-card"
-    data-category="sea"
-    data-name="Squalo"
-    data-model="squalo"
-  >
+<div class="vehicle-overlay"></div>
 
-    <div class="vehicle-image">
+</div>
 
-      <img
-        src="./images/squalo.jpg"
-        alt="Squalo"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-content">
 
-      <div class="vehicle-overlay"></div>
+<div class="vehicle-top">
 
-    </div>
+<span class="vehicle-category">
+Maritime
+</span>
 
-    <div class="vehicle-content">
+<span class="vehicle-number">
+03
+</span>
 
-      <div class="vehicle-top">
+</div>
 
-        <span class="vehicle-category">
-          Maritime
-        </span>
+<div class="vehicle-bottom">
 
-        <span class="vehicle-model">
-          03
-        </span>
+<h4>Squalo</h4>
 
-      </div>
+<div class="vehicle-model">
+MODEL · SQUALO
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-        <h4>
-          Squalo
-        </h4>
+<div class="vehicle-actions">
 
-        <div class="vehicle-code">
-          MODEL · SQUALO
-        </div>
+<button
+class="vehicle-button"
+onclick="openVehicle('Squalo','Maritime','squalo')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Squalo','Maritime','squalo')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</div>
 
-        </div>
+</article>
 
-      </div>
 
-    </div>
+<article class="vehicle-card" data-category="sea">
 
-  </article>
+<div class="vehicle-image">
 
+<img
+src="https://cdn.fivemetstore.com/carros/tropic.png"
+alt="Tropic"
+loading="lazy"
+>
 
-  <!-- TROPIC -->
+<div class="vehicle-overlay"></div>
 
-  <article
-    class="vehicle-card"
-    data-category="sea"
-    data-name="Tropic"
-    data-model="tropic"
-  >
+</div>
 
-    <div class="vehicle-image">
+<div class="vehicle-content">
 
-      <img
-        src="./images/tropic.jpg"
-        alt="Tropic"
-        onerror="this.style.display='none'"
-      >
+<div class="vehicle-top">
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-category">
+Maritime
+</span>
 
-    </div>
+<span class="vehicle-number">
+04
+</span>
 
-    <div class="vehicle-content">
+</div>
 
-      <div class="vehicle-top">
+<div class="vehicle-bottom">
 
-        <span class="vehicle-category">
-          Maritime
-        </span>
+<h4>Tropic</h4>
 
-        <span class="vehicle-model">
-          04
-        </span>
+<div class="vehicle-model">
+MODEL · TROPIC
+</div>
 
-      </div>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      <div class="vehicle-bottom">
+<div class="vehicle-actions">
 
-        <h4>
-          Tropic
-        </h4>
+<button
+class="vehicle-button"
+onclick="openVehicle('Tropic','Maritime','tropic')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <div class="vehicle-code">
-          MODEL · TROPIC
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
+</div>
 
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Tropic','Maritime','tropic')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
+</article>
 
-        </div>
 
-      </div>
+<article class="vehicle-card" data-category="sea">
 
-    </div>
+<div class="vehicle-image">
 
-  </article>
+<img
+src="https://cdn.fivemetstore.com/carros/tug.png"
+alt="Tug"
+loading="lazy"
+>
 
+<div class="vehicle-overlay"></div>
 
-  <!-- TUG -->
+</div>
 
-  <article
-    class="vehicle-card"
-    data-category="sea"
-    data-name="Tug"
-    data-model="tug"
-  >
+<div class="vehicle-content">
 
-    <div class="vehicle-image">
+<div class="vehicle-top">
 
-      <img
-        src="./images/tug.jpg"
-        alt="Tug"
-        onerror="this.style.display='none'"
-      >
+<span class="vehicle-category">
+Maritime
+</span>
 
-      <div class="vehicle-overlay"></div>
+<span class="vehicle-number">
+05
+</span>
 
-    </div>
+</div>
 
-    <div class="vehicle-content">
+<div class="vehicle-bottom">
 
-      <div class="vehicle-top">
+<h4>Tug</h4>
 
-        <span class="vehicle-category">
-          Maritime
-        </span>
+<div class="vehicle-model">
+MODEL · TUG
+</div>
 
-        <span class="vehicle-model">
-          05
-        </span>
+<div class="vehicle-price">
+Tarif :
+<strong>Sur devis</strong>
+</div>
 
-      </div>
+<div class="vehicle-actions">
 
-      <div class="vehicle-bottom">
+<button
+class="vehicle-button"
+onclick="openVehicle('Tug','Maritime','tug')"
+>
+Voir le véhicule
+<span></span>
+</button>
 
-        <h4>
-          Tug
-        </h4>
+</div>
 
-        <div class="vehicle-code">
-          MODEL · TUG
-        </div>
+</div>
 
-        <div class="vehicle-price">
-          Tarif :
-          <strong>
-            Sur devis
-          </strong>
-        </div>
+</div>
 
-        <div class="vehicle-actions">
-
-          <button
-            class="vehicle-button"
-            onclick="openVehicle('Tug','Maritime','tug')"
-          >
-            Voir le véhicule
-            <span></span>
-          </button>
-
-        </div>
-
-      </div>
-
-    </div>
-
-  </article>
+</article>
 
 
 </div>
-```
 
-  </div>
+</div>
 
-  <p class="fleet-note">
-
-```
-Les modèles présentés correspondent aux références
-de véhicules FiveM utilisées pour constituer la flotte.
-Les tarifs et conditions de location sont à définir.
-```
-
-  </p>
 
 </div>
 
 </section>
 
-<!-- ======================================================
+
+<!-- =========================
      RÉSERVATION
-     ====================================================== -->
+     ========================= -->
 
 <section id="reservation">
 
 <div class="container">
 
-  <div class="section-title">
+<div class="section-title">
 
-```
 <span class="eyebrow">
-  Réservation
+Réservation
 </span>
 
 <h2>
-  Organiser votre expérience
+Organiser votre expérience
 </h2>
 
 <p>
-  Sélectionnez votre véhicule et indiquez-nous
-  les détails de votre demande.
+Sélectionnez votre véhicule et envoyez-nous votre demande.
 </p>
-```
 
-  </div>
+</div>
 
-  <div class="reservation">
 
-```
+<div class="reservation">
+
+
 <div class="reservation-copy">
 
-  <h3>
-    Un service sur mesure
-  </h3>
+<h3>
+Un service sur mesure
+</h3>
 
-  <p>
+<p>
 
-    Chaque demande est étudiée individuellement.
-    La disponibilité, la durée et les conditions
-    sont confirmées avant validation.
+Chaque demande est étudiée individuellement.
+La disponibilité, la durée et les conditions
+sont confirmées avant validation.
 
-  </p>
-
-
-  <div class="contact-details">
-
-    <div class="contact-item">
-
-      <span>
-        Discord
-      </span>
-
-      <span>
-        À compléter
-      </span>
-
-    </div>
+</p>
 
 
-    <div class="contact-item">
+<div class="contact-details">
 
-      <span>
-        Disponibilité
-      </span>
+<div class="contact-item">
 
-      <span>
-        Sur réservation
-      </span>
+<span>
+Discord
+</span>
 
-    </div>
+<span>
+À compléter
+</span>
+
+</div>
 
 
-    <div class="contact-item">
+<div class="contact-item">
 
-      <span>
-        Localisation
-      </span>
+<span>
+Disponibilité
+</span>
 
-      <span>
-        À compléter
-      </span>
+<span>
+Sur réservation
+</span>
 
-    </div>
+</div>
 
-  </div>
+
+<div class="contact-item">
+
+<span>
+Localisation
+</span>
+
+<span>
+À compléter
+</span>
+
+</div>
+
+</div>
 
 </div>
 
 
 <form
-  class="form"
-  id="reservationForm"
+class="form"
+id="reservationForm"
 >
 
+<div class="field">
 
-  <div class="field">
+<label for="clientName">
+Nom / Pseudo RP
+</label>
 
-    <label for="clientName">
-      Nom / Pseudo RP
-    </label>
+<input
+id="clientName"
+type="text"
+placeholder="Votre nom"
+required
+>
 
-    <input
-      id="clientName"
-      type="text"
-      placeholder="Votre nom"
-      required
-    >
-
-  </div>
-
-
-  <div class="field">
-
-    <label for="vehicleSelect">
-      Véhicule
-    </label>
-
-    <select
-      id="vehicleSelect"
-      required
-    >
-
-      <option value="">
-        Sélectionner
-      </option>
-
-      <option>
-        Volatus
-      </option>
-
-      <option>
-        Swift Deluxe
-      </option>
-
-      <option>
-        Luxor Deluxe
-      </option>
-
-      <option>
-        Shamal
-      </option>
-
-      <option>
-        Vestra
-      </option>
-
-      <option>
-        Thrax
-      </option>
-
-      <option>
-        Entity MT
-      </option>
-
-      <option>
-        Virtue
-      </option>
-
-      <option>
-        Torero XO
-      </option>
-
-      <option>
-        Turismo Omaggio
-      </option>
-
-      <option>
-        Toro
-      </option>
-
-      <option>
-        Speeder
-      </option>
-
-      <option>
-        Squalo
-      </option>
-
-      <option>
-        Tropic
-      </option>
-
-      <option>
-        Tug
-      </option>
-
-    </select>
-
-  </div>
+</div>
 
 
-  <div class="field">
+<div class="field">
 
-    <label for="date">
-      Date souhaitée
-    </label>
+<label for="vehicleSelect">
+Véhicule
+</label>
 
-    <input
-      id="date"
-      type="date"
-      required
-    >
+<select
+id="vehicleSelect"
+required
+>
 
-  </div>
+<option value="">
+Sélectionner
+</option>
+
+<option>Volatus</option>
+<option>Swift Deluxe</option>
+<option>Luxor Deluxe</option>
+<option>Shamal</option>
+<option>Vestra</option>
+
+<option>Thrax</option>
+<option>Entity MT</option>
+<option>Virtue</option>
+<option>Torero XO</option>
+<option>Turismo Omaggio</option>
+
+<option>Toro</option>
+<option>Speeder</option>
+<option>Squalo</option>
+<option>Tropic</option>
+<option>Tug</option>
+
+</select>
+
+</div>
 
 
-  <div class="field">
+<div class="field">
 
-    <label for="message">
-      Votre demande
-    </label>
+<label for="date">
+Date souhaitée
+</label>
 
-    <textarea
-      id="message"
-      placeholder="Durée, horaire, lieu, événement..."
-      required
-    ></textarea>
+<input
+id="date"
+type="date"
+required
+>
 
-  </div>
+</div>
 
 
-  <button
-    type="submit"
-    class="btn btn-gold"
-  >
-    Envoyer la demande
-  </button>
+<div class="field">
 
+<label for="message">
+Votre demande
+</label>
+
+<textarea
+id="message"
+placeholder="Durée, horaire, lieu, événement..."
+required
+></textarea>
+
+</div>
+
+
+<button
+type="submit"
+class="btn btn-gold"
+>
+Envoyer la demande
+</button>
 
 </form>
-```
 
-  </div>
+
+</div>
 
 </div>
 
 </section>
 
+
 </main>
 
-<!-- ======================================================
-     FOOTER
-     ====================================================== -->
 
 <footer>
 
@@ -3122,51 +2274,50 @@ Les tarifs et conditions de location sont à définir.
 src="./elite_prestige_logo_petit.png"
 alt="Elite Prestige"
 class="footer-logo"
-
 >
 
-  <p>
-    Aérien · Terrestre · Maritime
-  </p>
+<p>
+Aérien · Terrestre · Maritime
+</p>
 
-  <p class="copyright">
-    ELITE PRESTIGE · Univers Roleplay
-  </p>
+<p class="copyright">
+ELITE PRESTIGE · Univers Roleplay
+</p>
 
 </footer>
 
-<!-- ======================================================
+
+<!-- =========================
      MODAL
-     ====================================================== -->
+     ========================= -->
 
 <div
-  class="modal"
-  id="vehicleModal"
-  aria-hidden="true"
+class="modal"
+id="vehicleModal"
+aria-hidden="true"
 >
 
-  <div class="modal-box">
+<div class="modal-box">
 
-```
 <button
-  class="modal-close"
-  onclick="closeVehicle()"
-  aria-label="Fermer"
+class="modal-close"
+onclick="closeVehicle()"
+aria-label="Fermer"
 >
-  ×
+×
 </button>
 
 
 <div
-  class="modal-category"
-  id="modalCategory"
+class="modal-category"
+id="modalCategory"
 >
-  Aérien
+Aérien
 </div>
 
 
 <h2 id="modalTitle">
-  Volatus
+Volatus
 </h2>
 
 
@@ -3175,328 +2326,292 @@ class="footer-logo"
 
 <p>
 
-  Ce modèle fait partie de la sélection
-  ELITE PRESTIGE.
+Ce modèle fait partie de la sélection
+ELITE PRESTIGE.
 
-  Les modalités de location sont confirmées
-  lors de la réservation selon la disponibilité,
-  la durée et l'utilisation souhaitée.
+Les modalités de location sont confirmées
+lors de la réservation selon la disponibilité,
+la durée et l'utilisation souhaitée.
 
 </p>
 
 
 <div
-  class="modal-code"
-  id="modalCode"
+class="modal-model"
+id="modalModel"
 >
-  MODEL · VOLATUS
+MODEL · VOLATUS
 </div>
 
 
 <div
-  class="modal-price"
-  id="modalPrice"
+class="modal-price"
 >
-  Tarif : Sur devis
+Tarif :
+<strong>Sur devis</strong>
 </div>
 
 
 <div class="modal-buttons">
 
-  <a
-    href="#reservation"
-    class="btn btn-gold"
-    onclick="closeVehicle()"
-  >
-    Réserver ce véhicule
-  </a>
+<a
+href="#reservation"
+class="btn btn-gold"
+onclick="closeVehicle()"
+>
+Réserver ce véhicule
+</a>
 
-  <button
-    class="btn btn-outline"
-    onclick="closeVehicle()"
-  >
-    Fermer
-  </button>
-
-</div>
-```
-
-  </div>
+<button
+class="btn btn-outline"
+onclick="closeVehicle()"
+>
+Fermer
+</button>
 
 </div>
+
+</div>
+
+</div>
+
 
 <script>
 
-/* =========================================================
+/* ==============================
    FILTRES
-   ========================================================= */
+   ============================== */
 
 const filters =
-  document.querySelectorAll(
-    ".filter"
-  );
+document.querySelectorAll(".filter");
 
 const groups =
-  document.querySelectorAll(
-    ".fleet-section"
-  );
+document.querySelectorAll(".fleet-section");
 
-filters.forEach(
-  filter => {
+filters.forEach(filter => {
 
-    filter.addEventListener(
-      "click",
-      () => {
+filter.addEventListener("click", () => {
 
-        filters.forEach(
-          item =>
-            item.classList.remove(
-              "active"
-            )
-        );
+filters.forEach(item => {
+item.classList.remove("active");
+});
 
-        filter.classList.add(
-          "active"
-        );
+filter.classList.add("active");
 
-        const selected =
-          filter.dataset.filter;
+const selected =
+filter.dataset.filter;
 
+groups.forEach(group => {
 
-        groups.forEach(
-          group => {
+if(
+selected === "all" ||
+group.dataset.group === selected
+){
 
-            const category =
-              group.dataset.group;
+group.style.display = "";
 
-            if(
-              selected === "all"
-              ||
-              selected === category
-            ){
+}else{
 
-              group.style.display =
-                "";
+group.style.display = "none";
 
-            }else{
+}
 
-              group.style.display =
-                "none";
+});
 
-            }
+});
 
-          }
-        );
-
-      }
-    );
-
-  }
-);
+});
 
 
-/* =========================================================
+/* ==============================
    MODALE
-   ========================================================= */
+   ============================== */
 
 const modal =
-  document.getElementById(
-    "vehicleModal"
-  );
+document.getElementById("vehicleModal");
 
 const modalTitle =
-  document.getElementById(
-    "modalTitle"
-  );
+document.getElementById("modalTitle");
 
 const modalCategory =
-  document.getElementById(
-    "modalCategory"
-  );
+document.getElementById("modalCategory");
 
-const modalCode =
-  document.getElementById(
-    "modalCode"
-  );
-
-const modalPrice =
-  document.getElementById(
-    "modalPrice"
-  );
+const modalModel =
+document.getElementById("modalModel");
 
 
 function openVehicle(
-  name,
-  category,
-  model
+name,
+category,
+model
 ){
 
-  modalTitle.textContent =
-    name;
+modalTitle.textContent =
+name;
 
-  modalCategory.textContent =
-    category;
+modalCategory.textContent =
+category;
 
-  modalCode.textContent =
-    "MODEL · "
-    +
-    model.toUpperCase();
+modalModel.textContent =
+"MODEL · " + model.toUpperCase();
 
-  modalPrice.textContent =
-    "Tarif : Sur devis";
+modal.classList.add("open");
 
+modal.setAttribute(
+"aria-hidden",
+"false"
+);
 
-  modal.classList.add(
-    "open"
-  );
-
-  modal.setAttribute(
-    "aria-hidden",
-    "false"
-  );
-
-  document.body.classList.add(
-    "modal-open"
-  );
+document.body.classList.add(
+"modal-open"
+);
 
 
-  const select =
-    document.getElementById(
-      "vehicleSelect"
-    );
+/* Préselection du formulaire */
 
+const select =
+document.getElementById(
+"vehicleSelect"
+);
 
-  if(select){
+if(select){
 
-    [...select.options]
-      .forEach(
-        option => {
+for(
+const option
+of select.options
+){
 
-          if(
-            option.text.trim()
-            ===
-            name.trim()
-          ){
+if(
+option.text.trim() ===
+name.trim()
+){
 
-            select.value =
-              option.text;
+select.value =
+option.text;
 
-          }
+break;
 
-        }
-      );
+}
 
-  }
+}
+
+}
 
 }
 
 
 function closeVehicle(){
 
-  modal.classList.remove(
-    "open"
-  );
+modal.classList.remove("open");
 
-  modal.setAttribute(
-    "aria-hidden",
-    "true"
-  );
+modal.setAttribute(
+"aria-hidden",
+"true"
+);
 
-  document.body.classList.remove(
-    "modal-open"
-  );
+document.body.classList.remove(
+"modal-open"
+);
 
 }
 
 
 modal.addEventListener(
-  "click",
-  event => {
+"click",
+event => {
 
-    if(
-      event.target === modal
-    ){
+if(event.target === modal){
 
-      closeVehicle();
+closeVehicle();
 
-    }
+}
 
-  }
-);
+});
 
 
 document.addEventListener(
-  "keydown",
-  event => {
+"keydown",
+event => {
 
-    if(
-      event.key === "Escape"
-    ){
+if(event.key === "Escape"){
 
-      closeVehicle();
+closeVehicle();
 
-    }
+}
 
-  }
+});
+
+
+/* ==============================
+   IMAGES
+   ============================== */
+
+/*
+   Si une image externe ne répond pas,
+   on garde la carte fonctionnelle avec
+   le fond premium plutôt que d'afficher
+   une icône d'image cassée.
+*/
+
+document
+.querySelectorAll(".vehicle-image img")
+.forEach(img => {
+
+img.addEventListener(
+"error",
+() => {
+
+img.style.display =
+"none";
+
+}
 );
 
+});
 
-/* =========================================================
+
+/* ==============================
    FORMULAIRE
-   ========================================================= */
+   ============================== */
 
-const form =
-  document.getElementById(
-    "reservationForm"
-  );
+document
+.getElementById("reservationForm")
+.addEventListener(
+"submit",
+event => {
 
+event.preventDefault();
 
-form.addEventListener(
-  "submit",
-  event => {
+const name =
+document.getElementById(
+"clientName"
+).value;
 
-    event.preventDefault();
+const vehicle =
+document.getElementById(
+"vehicleSelect"
+).value;
 
+const date =
+document.getElementById(
+"date"
+).value;
 
-    const name =
-      document.getElementById(
-        "clientName"
-      ).value;
+alert(
+"Demande préparée pour " +
+name +
+" — " +
+vehicle +
+" — " +
+date +
+".\n\n" +
+"Le système d'envoi réel sera connecté dans la prochaine étape."
+);
 
-    const vehicle =
-      document.getElementById(
-        "vehicleSelect"
-      ).value;
-
-    const date =
-      document.getElementById(
-        "date"
-      ).value;
-
-
-    alert(
-      "Demande enregistrée pour "
-      +
-      name
-      +
-      " — "
-      +
-      vehicle
-      +
-      " — "
-      +
-      date
-      +
-      ".\n\n"
-      +
-      "La connexion au système de réservation sera ajoutée dans une prochaine étape."
-    );
-
-  }
+}
 );
 
 </script>
 
 </body>
-
 </html>
