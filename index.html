@@ -447,30 +447,77 @@ section{
 .vehicle-image{
   position:absolute;
   inset:0;
+
+  display:flex;
+  align-items:center;
+  justify-content:center;
+
+  overflow:hidden;
+
   background:
     radial-gradient(
-      circle at center,
-      rgba(201,162,76,.12),
-      transparent 34%
+      ellipse at center,
+      rgba(201,162,76,.16) 0%,
+      rgba(201,162,76,.05) 28%,
+      transparent 60%
     ),
     linear-gradient(
       145deg,
-      #1b1b1e,
-      #09090b
+      #1b1b1e 0%,
+      #111113 45%,
+      #09090b 100%
     );
 }
 
+.vehicle-image::before{
+  content:"";
+
+  position:absolute;
+  inset:0;
+
+  background:
+    radial-gradient(
+      ellipse at center,
+      transparent 25%,
+      rgba(0,0,0,.28) 100%
+    );
+
+  z-index:1;
+
+  pointer-events:none;
+}
+
 .vehicle-image img{
+  position:relative;
+  z-index:0;
+
   width:100%;
-  height:100%;
-  object-fit:cover;
-  object-position:center center;
-  opacity:.82;
-  filter:saturate(.82) contrast(1.05);
-  transform:scale(1.08);
+  height:auto;
+
+  max-width:100%;
+  max-height:100%;
+
+  object-fit:contain;
+
+  opacity:.90;
+
+  filter:
+    saturate(.82)
+    contrast(1.05)
+    drop-shadow(
+      0 18px 25px
+      rgba(0,0,0,.55)
+    );
+
   transition:
     transform .8s cubic-bezier(.2,.7,.2,1),
     opacity .5s ease;
+}
+
+.vehicle-card:hover .vehicle-image img{
+  transform:scale(1.035);
+
+  opacity:1;
 }
 
 .vehicle-card:hover .vehicle-image img{
