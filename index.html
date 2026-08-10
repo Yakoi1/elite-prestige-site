@@ -1,34 +1,32 @@
 <!DOCTYPE html>
+
 <html lang="fr">
 
 <head>
 
 <meta charset="UTF-8">
 
-<meta
-  name="viewport"
-  content="width=device-width, initial-scale=1.0"
->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>
-  ELITE PRESTIGE — Aérien · Terrestre · Maritime
-</title>
+<title>ELITE PRESTIGE — Location Premium</title>
+
+<meta
+name="description"
+content="ELITE PRESTIGE — Location premium aérienne, terrestre et maritime."
+
+>
 
 <link
   rel="icon"
-  href="elite_prestige_logo_petit.png"
+  href="./elite_prestige_logo_petit.png"
 >
 
-<link
-  rel="preconnect"
-  href="https://fonts.googleapis.com"
->
+<link rel="preconnect" href="https://fonts.googleapis.com">
 
 <link
   href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@200;300;400;500&family=Work+Sans:wght@300;400;500&display=swap"
   rel="stylesheet"
 >
-
 
 <style>
 
@@ -38,28 +36,22 @@
 
 :root{
 
-  --bg:#0b0b0d;
-  --bg-alt:#101012;
-  --bg-card:#141416;
-  --bg-card-hover:#19191c;
+  --bg:#080809;
+  --bg2:#0e0e10;
+  --card:#121214;
 
   --gold:#c9a24c;
-  --gold-soft:#e6cf98;
+  --gold-light:#e5ce96;
 
-  --cream:#f3eee5;
-  --gray:#8c8c91;
-  --gray-dark:#5f5f64;
+  --white:#f3eee5;
 
-  --line:rgba(243,238,229,.12);
-  --line-soft:rgba(243,238,229,.07);
-  --line-gold:rgba(201,162,76,.4);
+  --gray:#929197;
+  --gray2:#66666b;
+
+  --line:rgba(243,238,229,.10);
+  --gold-line:rgba(201,162,76,.38);
 
 }
-
-
-/* =========================================================
-   RESET
-   ========================================================= */
 
 *{
   margin:0;
@@ -75,10 +67,10 @@ body{
 
   background:var(--bg);
 
-  color:var(--cream);
+  color:var(--white);
 
   font-family:
-    'Work Sans',
+    "Work Sans",
     sans-serif;
 
   font-weight:300;
@@ -91,11 +83,6 @@ body{
 
 body.modal-open{
   overflow:hidden;
-}
-
-::selection{
-  background:var(--gold);
-  color:#0b0b0d;
 }
 
 a{
@@ -115,24 +102,24 @@ img{
   max-width:100%;
 }
 
+::selection{
+  background:var(--gold);
+  color:#080809;
+}
+
 
 /* =========================================================
-   TYPOGRAPHIE
+   TYPO
    ========================================================= */
 
-.eyebrow{
+h1,
+h2,
+h3,
+h4{
 
-  font-family:'Jost',sans-serif;
+  font-family:"Jost",sans-serif;
 
-  font-weight:400;
-
-  letter-spacing:.35em;
-
-  text-transform:uppercase;
-
-  font-size:.72rem;
-
-  color:var(--gold);
+  font-weight:300;
 
 }
 
@@ -140,50 +127,31 @@ h1,
 h2,
 h3{
 
-  font-family:'Jost',sans-serif;
-
-  font-weight:300;
+  text-transform:uppercase;
 
   letter-spacing:.12em;
 
+}
+
+.eyebrow{
+
+  display:block;
+
+  color:var(--gold);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.68rem;
+
+  letter-spacing:.34em;
+
   text-transform:uppercase;
 
-  color:var(--cream);
-
-}
-
-h4{
-
-  font-family:'Jost',sans-serif;
-
-}
-
-.serif{
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
 }
 
 
 /* =========================================================
-   CONTAINER
-   ========================================================= */
-
-.wrap{
-
-  max-width:1180px;
-
-  margin:0 auto;
-
-  padding:0 40px;
-
-}
-
-
-/* =========================================================
-   NAVIGATION
+   HEADER
    ========================================================= */
 
 header{
@@ -196,25 +164,23 @@ header{
 
   z-index:100;
 
-  background:
-    rgba(11,11,13,.78);
-
-  backdrop-filter:blur(14px);
-
-  -webkit-backdrop-filter:blur(14px);
-
   border-bottom:
     1px solid var(--line);
+
+  background:
+    rgba(8,8,9,.78);
+
+  backdrop-filter:blur(16px);
 
 }
 
 nav{
 
-  max-width:1180px;
+  max-width:1200px;
 
-  margin:0 auto;
+  margin:auto;
 
-  padding:18px 40px;
+  padding:17px 38px;
 
   display:flex;
 
@@ -230,30 +196,26 @@ nav{
 
   align-items:center;
 
-  gap:12px;
+  gap:11px;
 
 }
 
-.brand svg{
+.brand img{
 
-  width:30px;
-  height:30px;
+  width:32px;
+  height:32px;
 
-  flex-shrink:0;
+  object-fit:contain;
 
 }
 
-.brand span{
+.brand-name{
 
-  font-family:'Jost',sans-serif;
+  font-family:"Jost",sans-serif;
 
-  font-size:.95rem;
+  font-size:.83rem;
 
-  letter-spacing:.3em;
-
-  color:var(--cream);
-
-  font-weight:400;
+  letter-spacing:.28em;
 
 }
 
@@ -261,7 +223,7 @@ nav{
 
   display:flex;
 
-  gap:38px;
+  gap:34px;
 
 }
 
@@ -269,19 +231,22 @@ nav{
 
   position:relative;
 
-  font-family:'Jost',sans-serif;
+  color:var(--gray);
 
-  font-size:.72rem;
+  font-family:"Jost",sans-serif;
 
-  letter-spacing:.2em;
+  font-size:.67rem;
+
+  letter-spacing:.18em;
 
   text-transform:uppercase;
 
-  color:var(--gray);
+  transition:.3s;
 
-  transition:
-    color .3s ease;
+}
 
+.navlinks a:hover{
+  color:var(--gold-light);
 }
 
 .navlinks a::after{
@@ -291,28 +256,19 @@ nav{
   position:absolute;
 
   left:0;
-  bottom:-8px;
+  bottom:-7px;
 
   width:0;
   height:1px;
 
   background:var(--gold);
 
-  transition:
-    width .3s ease;
-
-}
-
-.navlinks a:hover{
-
-  color:var(--gold);
+  transition:.3s;
 
 }
 
 .navlinks a:hover::after{
-
   width:100%;
-
 }
 
 
@@ -326,31 +282,29 @@ nav{
 
   position:relative;
 
-  overflow:hidden;
-
   display:flex;
 
   align-items:center;
 
   justify-content:center;
 
+  overflow:hidden;
+
   text-align:center;
 
-  padding:
-    150px 24px
-    90px;
+  padding:130px 25px 100px;
 
   background:
 
     radial-gradient(
-      circle at 50% 38%,
-      rgba(201,162,76,.12),
-      transparent 28%
+      circle at center,
+      rgba(201,162,76,.10),
+      transparent 30%
     ),
 
     radial-gradient(
-      ellipse at 50% 85%,
-      rgba(201,162,76,.055),
+      ellipse at center bottom,
+      rgba(201,162,76,.06),
       transparent 55%
     ),
 
@@ -364,34 +318,12 @@ nav{
 
   position:absolute;
 
-  inset:7%;
+  width:650px;
+  height:650px;
 
   border:
     1px solid
-    rgba(201,162,76,.08);
-
-  border-radius:50%;
-
-  transform:
-    scaleX(1.45);
-
-}
-
-.hero::after{
-
-  content:"";
-
-  position:absolute;
-
-  width:52vw;
-  height:52vw;
-
-  max-width:720px;
-  max-height:720px;
-
-  border:
-    1px solid
-    rgba(201,162,76,.055);
+    rgba(201,162,76,.06);
 
   border-radius:50%;
 
@@ -411,117 +343,80 @@ nav{
 
 }
 
-.hero-mark{
+.hero-logo{
 
-  width:min(310px,62vw);
+  width:min(430px,82vw);
 
-  margin-bottom:34px;
-
-  opacity:.98;
+  margin-bottom:28px;
 
   filter:
     drop-shadow(
-      0 0 24px
-      rgba(201,162,76,.09)
+      0 0 30px
+      rgba(201,162,76,.08)
     );
-
-  animation:
-    heroLogoIn
-    1.2s
-    cubic-bezier(.2,.7,.2,1)
-    both;
 
 }
 
-.hero .tagline{
-
-  font-family:'Jost',sans-serif;
-
-  font-weight:300;
-
-  letter-spacing:.42em;
-
-  text-transform:uppercase;
-
-  font-size:.78rem;
+.hero-tagline{
 
   color:var(--gray);
 
-  margin-bottom:30px;
+  font-family:"Jost",sans-serif;
 
-  animation:
-    fadeUp
-    .9s
-    .15s
-    both;
+  font-size:.7rem;
+
+  letter-spacing:.38em;
+
+  text-transform:uppercase;
 
 }
 
-.hero-rule{
+.hero-line{
 
-  width:64px;
+  width:62px;
+
   height:1px;
 
-  background:var(--line-gold);
+  margin:26px 0;
 
-  margin:26px auto;
-
-  animation:
-    ruleIn
-    .8s
-    .3s
-    both;
+  background:var(--gold);
 
 }
 
-.hero .lede{
+.hero-quote{
 
-  max-width:560px;
+  max-width:650px;
+
+  color:#d5cfc3;
 
   font-family:
-    'Cormorant Garamond',
+    "Cormorant Garamond",
     serif;
 
-  font-size:1.35rem;
+  font-size:1.45rem;
 
   font-style:italic;
 
-  color:#c9c5ba;
-
-  line-height:1.7;
-
-  animation:
-    fadeUp
-    .9s
-    .4s
-    both;
-
 }
 
-
-/* =========================================================
-   BOUTONS
-   ========================================================= */
-
-.cta-row{
+.hero-buttons{
 
   display:flex;
-
-  gap:18px;
-
-  margin-top:44px;
 
   flex-wrap:wrap;
 
   justify-content:center;
 
-  animation:
-    fadeUp
-    .9s
-    .55s
-    both;
+  gap:14px;
+
+  margin-top:38px;
 
 }
+
+
+/* =========================================================
+   BUTTONS
+   ========================================================= */
 
 .btn{
 
@@ -531,343 +426,238 @@ nav{
 
   justify-content:center;
 
-  padding:16px 34px;
+  min-height:48px;
 
-  border:1px solid var(--line-gold);
+  padding:14px 29px;
 
-  font-family:'Jost',sans-serif;
+  border:
+    1px solid
+    var(--gold-line);
 
-  font-size:.74rem;
+  font-family:"Jost",sans-serif;
 
-  letter-spacing:.22em;
+  font-size:.64rem;
+
+  letter-spacing:.2em;
 
   text-transform:uppercase;
 
   cursor:pointer;
 
-  transition:
-    background .3s ease,
-    color .3s ease,
-    border-color .3s ease,
-    transform .3s ease;
+  transition:.3s;
 
 }
 
-.btn:hover{
+.btn-gold{
 
-  transform:
-    translateY(-2px);
-
-}
-
-.btn-solid{
+  color:#080809;
 
   background:var(--gold);
 
-  color:#0b0b0d;
+  border-color:var(--gold);
+
+}
+
+.btn-gold:hover{
+
+  background:var(--gold-light);
+
+  border-color:var(--gold-light);
+
+}
+
+.btn-outline{
+
+  color:var(--white);
+
+  background:transparent;
+
+}
+
+.btn-outline:hover{
+
+  color:var(--gold-light);
 
   border-color:var(--gold);
 
 }
 
-.btn-solid:hover{
 
-  background:var(--gold-soft);
+/* =========================================================
+   GENERAL
+   ========================================================= */
 
-  border-color:var(--gold-soft);
+.container{
+
+  width:min(1160px,calc(100% - 48px));
+
+  margin:auto;
 
 }
 
-.btn-ghost{
+section{
 
-  color:var(--cream);
+  padding:95px 0;
 
 }
 
-.btn-ghost:hover{
+.section-title{
 
-  color:var(--gold);
+  text-align:center;
 
-  border-color:var(--gold);
+  margin-bottom:60px;
+
+}
+
+.section-title .eyebrow{
+  margin-bottom:15px;
+}
+
+.section-title h2{
+
+  font-size:
+    clamp(1.5rem,3vw,2.2rem);
+
+}
+
+.section-title p{
+
+  max-width:620px;
+
+  margin:18px auto 0;
+
+  color:var(--gray);
+
+  font-size:.9rem;
 
 }
 
 
 /* =========================================================
-   SCROLL
+   INTRO
    ========================================================= */
 
-.hero-scroll{
+.intro{
 
-  position:absolute;
+  max-width:800px;
 
-  z-index:2;
+  margin:auto;
 
-  bottom:28px;
+  text-align:center;
 
-  left:50%;
+  color:#d7d1c6;
 
-  transform:
-    translateX(-50%);
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  display:flex;
+  font-size:1.45rem;
 
-  flex-direction:column;
-
-  align-items:center;
-
-  gap:9px;
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.58rem;
-
-  letter-spacing:.28em;
-
-  text-transform:uppercase;
-
-  color:rgba(243,238,229,.4);
-
-  animation:
-    fadeUp
-    1s
-    .9s
-    both;
+  line-height:1.8;
 
 }
 
-.hero-scroll span{
-
-  width:1px;
-  height:34px;
-
-  background:
-    linear-gradient(
-      to bottom,
-      var(--gold),
-      transparent
-    );
-
+.intro em{
+  color:var(--gold-light);
 }
 
 
 /* =========================================================
-   ANIMATIONS
+   FLEET FILTERS
    ========================================================= */
 
-@keyframes heroLogoIn{
-
-  from{
-
-    opacity:0;
-
-    transform:
-      translateY(18px)
-      scale(.96);
-
-  }
-
-  to{
-
-    opacity:.98;
-
-    transform:
-      translateY(0)
-      scale(1);
-
-  }
-
-}
-
-@keyframes fadeUp{
-
-  from{
-
-    opacity:0;
-
-    transform:
-      translateY(14px);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:
-      translateY(0);
-
-  }
-
-}
-
-@keyframes ruleIn{
-
-  from{
-
-    opacity:0;
-
-    transform:
-      scaleX(0);
-
-  }
-
-  to{
-
-    opacity:1;
-
-    transform:
-      scaleX(1);
-
-  }
-
-}
-
-
-/* =========================================================
-   DIVIDER
-   ========================================================= */
-
-.arc-divider{
+.filters{
 
   display:flex;
 
   justify-content:center;
 
-  padding:64px 0;
+  flex-wrap:wrap;
+
+  gap:8px;
+
+  margin:
+    -25px auto
+    55px;
 
 }
 
-.arc-divider svg{
+.filter{
 
-  width:56px;
-  height:56px;
+  padding:10px 19px;
 
-  opacity:.55;
+  border:
+    1px solid var(--line);
 
-}
-
-
-/* =========================================================
-   SECTIONS
-   ========================================================= */
-
-section{
-
-  padding:
-    20px 0
-    90px;
-
-}
-
-.section-head{
-
-  text-align:center;
-
-  margin-bottom:64px;
-
-}
-
-.section-head .eyebrow{
-
-  display:block;
-
-  margin-bottom:16px;
-
-}
-
-.section-head h2{
-
-  font-size:
-    clamp(
-      1.5rem,
-      3.4vw,
-      2.1rem
-    );
-
-}
-
-.section-head p{
-
-  max-width:600px;
-
-  margin:22px auto 0;
+  background:transparent;
 
   color:var(--gray);
 
-  font-size:.98rem;
+  font-family:"Jost",sans-serif;
+
+  font-size:.61rem;
+
+  letter-spacing:.18em;
+
+  text-transform:uppercase;
+
+  cursor:pointer;
+
+  transition:.3s;
+
+}
+
+.filter:hover,
+.filter.active{
+
+  color:#080809;
+
+  background:var(--gold);
+
+  border-color:var(--gold);
 
 }
 
 
 /* =========================================================
-   LA MAISON
+   FLEET
    ========================================================= */
 
-.about-text{
+.fleet-section{
 
-  max-width:760px;
-
-  margin:0 auto;
-
-  text-align:center;
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
-  font-size:1.5rem;
-
-  color:#ddd7c9;
-
-  line-height:1.75;
+  margin-bottom:75px;
 
 }
 
-.about-text em{
-
-  color:var(--gold-soft);
-
-  font-style:italic;
-
+.fleet-section:last-child{
+  margin-bottom:0;
 }
 
-
-/* =========================================================
-   FLOTTE — HEADER
-   ========================================================= */
-
-.fleet-group{
-
-  margin-bottom:82px;
-
-}
-
-.fleet-group-title{
+.fleet-heading{
 
   display:flex;
 
   align-items:center;
 
-  gap:18px;
+  gap:17px;
 
-  margin-bottom:30px;
+  margin-bottom:24px;
 
 }
 
-.fleet-group-title h3{
+.fleet-heading h3{
 
-  font-size:.9rem;
+  color:var(--gold-light);
+
+  font-size:.82rem;
 
   letter-spacing:.28em;
-
-  color:var(--gold-soft);
 
   white-space:nowrap;
 
 }
 
-.fleet-group-title .line{
+.fleet-heading-line{
 
   flex:1;
 
@@ -879,7 +669,7 @@ section{
 
 
 /* =========================================================
-   FLOTTE — GRID
+   CARDS
    ========================================================= */
 
 .fleet-grid{
@@ -887,33 +677,111 @@ section{
   display:grid;
 
   grid-template-columns:
-    repeat(
-      auto-fit,
-      minmax(260px,1fr)
-    );
+    repeat(3,1fr);
 
-  gap:1px;
+  gap:2px;
 
   background:var(--line);
 
 }
 
-
-/* =========================================================
-   FLOTTE — CARTE
-   ========================================================= */
-
-.fleet-card{
+.vehicle-card{
 
   position:relative;
 
-  min-height:265px;
-
-  padding:34px 30px 28px;
+  height:440px;
 
   overflow:hidden;
 
-  background:var(--bg-card);
+  background:var(--card);
+
+  transition:
+    opacity .35s,
+    transform .35s;
+
+}
+
+.vehicle-card.hidden{
+
+  display:none;
+
+}
+
+.vehicle-image{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    radial-gradient(
+      circle at center,
+      rgba(201,162,76,.12),
+      transparent 35%
+    ),
+
+    linear-gradient(
+      145deg,
+      #1b1b1e,
+      #0b0b0d
+    );
+
+}
+
+.vehicle-image img{
+
+  width:100%;
+  height:100%;
+
+  object-fit:cover;
+
+  opacity:.78;
+
+  filter:
+    saturate(.78)
+    contrast(1.06);
+
+  transition:
+    transform .8s ease,
+    opacity .5s ease;
+
+}
+
+.vehicle-card:hover
+.vehicle-image img{
+
+  transform:scale(1.07);
+
+  opacity:.92;
+
+}
+
+.vehicle-overlay{
+
+  position:absolute;
+
+  inset:0;
+
+  background:
+
+    linear-gradient(
+      to bottom,
+      rgba(5,5,7,.08),
+      rgba(5,5,7,.18) 35%,
+      rgba(5,5,7,.82) 75%,
+      rgba(5,5,7,.98)
+    );
+
+}
+
+.vehicle-content{
+
+  position:absolute;
+
+  inset:0;
+
+  padding:25px;
 
   display:flex;
 
@@ -921,385 +789,181 @@ section{
 
   justify-content:space-between;
 
-  transition:
-    background .4s ease,
-    transform .4s ease;
-
 }
 
-.fleet-card::before{
-
-  content:"";
-
-  position:absolute;
-
-  inset:0;
-
-  background:
-    radial-gradient(
-      circle at 80% 15%,
-      rgba(201,162,76,.1),
-      transparent 34%
-    );
-
-  opacity:0;
-
-  transition:
-    opacity .4s ease;
-
-}
-
-.fleet-card::after{
-
-  content:"";
-
-  position:absolute;
-
-  left:0;
-  right:0;
-  bottom:0;
-
-  height:1px;
-
-  background:
-    linear-gradient(
-      90deg,
-      transparent,
-      var(--gold),
-      transparent
-    );
-
-  opacity:0;
-
-  transition:
-    opacity .4s ease;
-
-}
-
-.fleet-card:hover{
-
-  background:var(--bg-card-hover);
-
-}
-
-.fleet-card:hover::before,
-.fleet-card:hover::after{
-
-  opacity:1;
-
-}
-
-.fleet-top{
-
-  position:relative;
-
-  z-index:1;
+.vehicle-top{
 
   display:flex;
-
-  align-items:flex-start;
 
   justify-content:space-between;
-
-}
-
-.fleet-category{
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.6rem;
-
-  letter-spacing:.2em;
-
-  text-transform:uppercase;
-
-  color:var(--gray);
-
-}
-
-.fleet-number{
-
-  font-family:
-    'Cormorant Garamond',
-    serif;
-
-  font-size:1.05rem;
-
-  color:rgba(230,207,152,.35);
-
-}
-
-.fleet-icon{
-
-  position:relative;
-
-  z-index:1;
-
-  width:54px;
-  height:54px;
-
-  margin:
-    25px 0
-    16px;
-
-  color:var(--gold);
-
-  transition:
-    transform .4s ease,
-    color .4s ease;
-
-}
-
-.fleet-card:hover .fleet-icon{
-
-  transform:
-    translateY(-4px);
-
-  color:var(--gold-soft);
-
-}
-
-.fleet-icon svg{
-
-  width:100%;
-  height:100%;
-
-}
-
-.fleet-info{
-
-  position:relative;
-
-  z-index:1;
-
-}
-
-.fleet-info h4{
-
-  font-size:1.15rem;
-
-  font-weight:400;
-
-  letter-spacing:.06em;
-
-  color:var(--cream);
-
-  margin-bottom:7px;
-
-}
-
-.fleet-price{
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.76rem;
-
-  letter-spacing:.08em;
-
-  color:var(--gray);
-
-}
-
-.fleet-price strong{
-
-  color:var(--gold);
-
-  font-weight:500;
-
-}
-
-.fleet-bottom{
-
-  position:relative;
-
-  z-index:1;
-
-  display:flex;
 
   align-items:center;
 
-  justify-content:space-between;
-
-  gap:15px;
-
-  margin-top:25px;
-
 }
 
-.fleet-action{
+.vehicle-category{
 
-  font-family:'Jost',sans-serif;
+  padding:6px 10px;
 
-  font-size:.62rem;
+  border:
+    1px solid
+    rgba(229,206,150,.28);
+
+  background:
+    rgba(8,8,9,.35);
+
+  color:var(--gold-light);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.54rem;
 
   letter-spacing:.18em;
 
   text-transform:uppercase;
 
-  color:var(--gold-soft);
+}
 
-  background:none;
+.vehicle-model{
 
-  border:none;
+  color:rgba(243,238,229,.3);
 
-  border-bottom:1px solid transparent;
+  font-family:
+    "Cormorant Garamond",
+    serif;
 
-  padding-bottom:3px;
-
-  cursor:pointer;
-
-  transition:
-    border-color .3s ease,
-    color .3s ease;
+  font-size:1rem;
 
 }
 
-.fleet-action:hover{
+.vehicle-bottom::before{
 
-  color:var(--gold);
+  content:"";
 
-  border-color:var(--gold);
+  display:block;
 
-}
-
-.fleet-line{
-
-  flex:1;
+  width:42px;
 
   height:1px;
 
-  background:var(--line-soft);
+  margin-bottom:15px;
 
+  background:var(--gold);
+
+}
+
+.vehicle-bottom h4{
+
+  font-size:1.22rem;
+
+  letter-spacing:.07em;
+
+}
+
+.vehicle-code{
+
+  margin-top:4px;
+
+  color:var(--gray2);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.58rem;
+
+  letter-spacing:.12em;
+
+}
+
+.vehicle-price{
+
+  margin-top:9px;
+
+  color:var(--gray);
+
+  font-size:.73rem;
+
+}
+
+.vehicle-price strong{
+
+  color:var(--gold-light);
+
+  font-weight:400;
+
+}
+
+.vehicle-actions{
+
+  margin-top:19px;
+
+}
+
+.vehicle-button{
+
+  display:inline-flex;
+
+  align-items:center;
+
+  gap:9px;
+
+  border:0;
+
+  padding:0;
+
+  background:none;
+
+  color:var(--white);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.59rem;
+
+  letter-spacing:.17em;
+
+  text-transform:uppercase;
+
+  cursor:pointer;
+
+}
+
+.vehicle-button span{
+
+  width:22px;
+
+  height:1px;
+
+  background:var(--gold);
+
+  transition:.3s;
+
+}
+
+.vehicle-button:hover{
+  color:var(--gold-light);
+}
+
+.vehicle-button:hover span{
+  width:34px;
 }
 
 
 /* =========================================================
-   TARIFS
+   ABOUT FLEET
    ========================================================= */
 
-.pricing-block{
+.fleet-note{
 
-  margin-bottom:60px;
+  margin-top:35px;
 
-}
+  text-align:center;
 
-.pricing-block-head{
-
-  margin-bottom:26px;
-
-}
-
-.pricing-block-head h3{
-
-  font-size:1rem;
-
-  letter-spacing:.2em;
-
-}
-
-.pricing-block-head p{
-
-  color:var(--gray);
-
-  font-size:.88rem;
-
-  margin-top:8px;
-
-}
-
-.table-scroll{
-
-  overflow-x:auto;
-
-}
-
-table{
-
-  width:100%;
-
-  border-collapse:collapse;
-
-}
-
-th{
-
-  text-align:left;
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.68rem;
-
-  font-weight:400;
-
-  letter-spacing:.18em;
-
-  text-transform:uppercase;
-
-  color:var(--gray);
-
-  padding:14px 18px;
-
-  border-bottom:
-    1px solid
-    var(--line-gold);
-
-}
-
-td{
-
-  padding:16px 18px;
-
-  border-bottom:
-    1px solid
-    var(--line);
-
-  font-size:.94rem;
-
-}
-
-td.name{
-
-  color:var(--cream);
-
-  font-family:'Jost',sans-serif;
-
-  font-weight:400;
-
-}
-
-td.num{
-
-  color:var(--gold-soft);
-
-  text-align:right;
-
-  font-family:'Jost',sans-serif;
-
-}
-
-th.num{
-
-  text-align:right;
-
-}
-
-tr:last-child td{
-
-  border-bottom:none;
-
-}
-
-.note{
-
-  margin-top:16px;
-
-  color:var(--gray);
+  color:var(--gray2);
 
   font-family:
-    'Cormorant Garamond',
+    "Cormorant Garamond",
     serif;
 
-  font-size:.82rem;
+  font-size:.9rem;
 
   font-style:italic;
 
@@ -1307,116 +971,115 @@ tr:last-child td{
 
 
 /* =========================================================
-   CONTACT
+   RESERVATION
    ========================================================= */
 
-.contact-wrap{
+.reservation{
 
   display:grid;
 
   grid-template-columns:
-    1fr 1fr;
+    .8fr 1.2fr;
 
-  gap:70px;
-
-  align-items:start;
+  gap:75px;
 
 }
 
-.contact-info h3{
+.reservation-copy h3{
+
+  margin-bottom:17px;
 
   font-size:1.1rem;
 
-  letter-spacing:.1em;
-
-  margin-bottom:20px;
-
 }
 
-.contact-info p{
+.reservation-copy p{
 
   color:var(--gray);
 
-  font-size:.95rem;
+  font-size:.9rem;
 
-  margin-bottom:26px;
+  line-height:1.8;
 
 }
 
-.contact-line{
+.contact-details{
+
+  margin-top:30px;
+
+}
+
+.contact-item{
 
   display:flex;
 
   justify-content:space-between;
 
-  padding:16px 0;
+  gap:20px;
+
+  padding:15px 0;
 
   border-bottom:
-    1px solid
-    var(--line);
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.8rem;
-
-  letter-spacing:.08em;
+    1px solid var(--line);
 
 }
 
-.contact-line span:first-child{
+.contact-item span:first-child{
 
   color:var(--gray);
 
+  font-family:"Jost",sans-serif;
+
+  font-size:.6rem;
+
+  letter-spacing:.17em;
+
   text-transform:uppercase;
-
-  font-size:.7rem;
-
-  letter-spacing:.2em;
 
 }
 
-.contact-line span:last-child{
+.contact-item span:last-child{
 
-  color:var(--gold-soft);
+  color:var(--gold-light);
+
+  font-size:.72rem;
+
+  text-align:right;
 
 }
 
 
 /* =========================================================
-   FORMULAIRE
+   FORM
    ========================================================= */
 
-form{
+.form{
 
-  display:flex;
+  display:grid;
 
-  flex-direction:column;
-
-  gap:18px;
+  gap:17px;
 
 }
 
 .field{
 
-  display:flex;
+  display:grid;
 
-  flex-direction:column;
-
-  gap:8px;
+  gap:7px;
 
 }
 
 .field label{
 
-  font-family:'Jost',sans-serif;
+  color:var(--gray);
 
-  font-size:.68rem;
+  font-family:"Jost",sans-serif;
 
-  letter-spacing:.2em;
+  font-size:.6rem;
+
+  letter-spacing:.18em;
 
   text-transform:uppercase;
-
-  color:var(--gray);
 
 }
 
@@ -1426,20 +1089,20 @@ form{
 
   width:100%;
 
-  background:var(--bg-card);
+  padding:14px 15px;
 
   border:
-    1px solid
-    var(--line);
-
-  color:var(--cream);
-
-  padding:14px 16px;
+    1px solid var(--line);
 
   outline:none;
 
-  transition:
-    border-color .25s ease;
+  background:#111113;
+
+  color:var(--white);
+
+  font-size:.88rem;
+
+  transition:.25s;
 
 }
 
@@ -1453,26 +1116,73 @@ form{
 
 .field textarea{
 
-  resize:vertical;
+  min-height:115px;
 
-  min-height:110px;
+  resize:vertical;
 
 }
 
-form .btn{
+.form .btn{
 
-  align-self:flex-start;
+  justify-self:start;
 
-  margin-top:6px;
+  margin-top:4px;
 
 }
 
 
 /* =========================================================
-   MODALE VEHICULE
+   FOOTER
    ========================================================= */
 
-.vehicle-modal{
+footer{
+
+  padding:50px 20px;
+
+  border-top:
+    1px solid var(--line);
+
+  text-align:center;
+
+}
+
+.footer-logo{
+
+  width:80px;
+
+  margin:
+    0 auto 18px;
+
+}
+
+footer p{
+
+  color:var(--gray2);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.61rem;
+
+  letter-spacing:.15em;
+
+  text-transform:uppercase;
+
+}
+
+footer .copyright{
+
+  margin-top:9px;
+
+  color:#454549;
+
+}
+
+
+/* =========================================================
+   MODAL
+   ========================================================= */
+
+.modal{
 
   position:fixed;
 
@@ -1489,23 +1199,19 @@ form .btn{
   padding:25px;
 
   background:
-    rgba(0,0,0,.78);
+    rgba(0,0,0,.82);
 
-  backdrop-filter:blur(12px);
-
-  -webkit-backdrop-filter:blur(12px);
+  backdrop-filter:blur(10px);
 
   opacity:0;
 
   visibility:hidden;
 
-  transition:
-    opacity .3s ease,
-    visibility .3s ease;
+  transition:.3s;
 
 }
 
-.vehicle-modal.active{
+.modal.open{
 
   opacity:1;
 
@@ -1515,36 +1221,32 @@ form .btn{
 
 .modal-box{
 
-  width:min(620px,100%);
+  position:relative;
+
+  width:min(680px,100%);
 
   max-height:90vh;
 
   overflow:auto;
 
-  background:#111113;
+  padding:45px;
 
   border:
-    1px solid
-    var(--line-gold);
+    1px solid var(--gold-line);
 
-  padding:42px;
-
-  position:relative;
+  background:#111113;
 
   transform:
-    translateY(20px)
-    scale(.98);
+    translateY(20px);
 
-  transition:
-    transform .35s ease;
+  transition:.35s;
 
 }
 
-.vehicle-modal.active .modal-box{
+.modal.open .modal-box{
 
   transform:
-    translateY(0)
-    scale(1);
+    translateY(0);
 
 }
 
@@ -1552,186 +1254,118 @@ form .btn{
 
   position:absolute;
 
-  top:18px;
-  right:20px;
+  top:15px;
+  right:17px;
 
-  width:38px;
-  height:38px;
+  width:36px;
+  height:36px;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--line);
 
   background:transparent;
 
   color:var(--gray);
 
-  font-size:1.3rem;
-
   cursor:pointer;
 
-  transition:
-    color .25s ease,
-    border-color .25s ease;
+  font-size:1.2rem;
 
 }
 
 .modal-close:hover{
 
-  color:var(--gold);
+  color:var(--gold-light);
 
   border-color:var(--gold);
 
 }
 
-.modal-eyebrow{
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.65rem;
-
-  letter-spacing:.25em;
-
-  text-transform:uppercase;
+.modal-category{
 
   color:var(--gold);
 
-  margin-bottom:12px;
+  font-family:"Jost",sans-serif;
 
-}
+  font-size:.6rem;
 
-.modal-title{
-
-  font-family:'Jost',sans-serif;
-
-  font-size:
-    clamp(
-      1.5rem,
-      4vw,
-      2.2rem
-    );
-
-  font-weight:300;
-
-  letter-spacing:.1em;
+  letter-spacing:.22em;
 
   text-transform:uppercase;
 
-  color:var(--cream);
+}
 
-  margin-bottom:12px;
+.modal h2{
+
+  margin-top:8px;
+
+  font-size:
+    clamp(1.5rem,4vw,2.25rem);
 
 }
 
-.modal-rule{
+.modal-line{
 
-  width:55px;
+  width:50px;
+
   height:1px;
+
+  margin:20px 0;
 
   background:var(--gold);
 
-  margin:22px 0;
-
 }
 
-.modal-text{
+.modal p{
 
   color:var(--gray);
 
-  font-size:.95rem;
+  font-size:.9rem;
 
   line-height:1.8;
 
 }
 
-.modal-price{
+.modal-code{
 
-  margin-top:28px;
+  margin-top:20px;
 
-  padding:18px;
+  padding:14px;
 
   border:
-    1px solid
-    var(--line);
+    1px solid var(--line);
+
+  color:var(--gray2);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.65rem;
+
+  letter-spacing:.13em;
+
+}
+
+.modal-price{
+
+  margin-top:15px;
+
+  color:var(--gold-light);
+
+  font-family:"Jost",sans-serif;
+
+  font-size:.8rem;
+
+}
+
+.modal-buttons{
 
   display:flex;
 
-  align-items:center;
+  flex-wrap:wrap;
 
-  justify-content:space-between;
+  gap:12px;
 
-  gap:20px;
-
-}
-
-.modal-price span{
-
-  font-family:'Jost',sans-serif;
-
-  font-size:.68rem;
-
-  letter-spacing:.18em;
-
-  text-transform:uppercase;
-
-  color:var(--gray);
-
-}
-
-.modal-price strong{
-
-  color:var(--gold-soft);
-
-  font-family:'Jost',sans-serif;
-
-  font-weight:400;
-
-}
-
-
-/* =========================================================
-   FOOTER
-   ========================================================= */
-
-footer{
-
-  border-top:
-    1px solid
-    var(--line);
-
-  padding:50px 0;
-
-  text-align:center;
-
-}
-
-footer .brand{
-
-  justify-content:center;
-
-  margin-bottom:16px;
-
-}
-
-footer p{
-
-  color:var(--gray);
-
-  font-size:.72rem;
-
-  letter-spacing:.15em;
-
-  font-family:'Jost',sans-serif;
-
-  text-transform:uppercase;
-
-}
-
-footer p.copy{
-
-  margin-top:10px;
-
-  color:#5c5c60;
+  margin-top:25px;
 
 }
 
@@ -1740,9 +1374,20 @@ footer p.copy{
    RESPONSIVE
    ========================================================= */
 
+@media(max-width:950px){
+
+  .fleet-grid{
+
+    grid-template-columns:
+      repeat(2,1fr);
+
+  }
+
+}
+
 @media(max-width:820px){
 
-  .contact-wrap{
+  .reservation{
 
     grid-template-columns:1fr;
 
@@ -1752,77 +1397,56 @@ footer p.copy{
 
 }
 
-@media(max-width:800px){
+@media(max-width:700px){
 
   .navlinks{
-
     display:none;
-
   }
 
 }
 
-@media(max-width:640px){
+@media(max-width:620px){
 
-  .wrap{
+  .container{
 
-    padding:
-      0 22px;
+    width:
+      calc(100% - 36px);
 
   }
 
   nav{
 
     padding:
-      16px 22px;
+      15px 20px;
 
   }
 
   .hero{
 
     padding:
-      130px 22px
-      90px;
+      120px 20px 90px;
 
   }
 
-  .hero::before{
+  .hero-logo{
 
-    inset:12%;
-
-    transform:
-      scaleX(1.25);
+    width:88vw;
 
   }
 
-  .hero::after{
+  .hero-tagline{
 
-    width:85vw;
-    height:85vw;
+    font-size:.58rem;
 
-  }
+    letter-spacing:.25em;
 
-  .hero-mark{
-
-    width:min(255px,70vw);
-
-    margin-bottom:28px;
+    line-height:1.8;
 
   }
 
-  .hero .tagline{
+  .hero-quote{
 
-    font-size:.66rem;
-
-    letter-spacing:.30em;
-
-  }
-
-  .hero .lede{
-
-    max-width:340px;
-
-    font-size:1.18rem;
+    font-size:1.2rem;
 
   }
 
@@ -1832,60 +1456,22 @@ footer p.copy{
 
   }
 
-  .fleet-card{
+  .vehicle-card{
 
-    min-height:245px;
-
-  }
-
-  .fleet-group-title{
-
-    gap:12px;
+    height:410px;
 
   }
 
-  .fleet-group-title h3{
+  .reservation{
 
-    font-size:.78rem;
-
-    letter-spacing:.22em;
-
-  }
-
-  .contact-line{
-
-    gap:20px;
-
-    align-items:flex-start;
-
-  }
-
-  .contact-line span:last-child{
-
-    text-align:right;
-
-  }
-
-  .btn{
-
-    padding:
-      15px 24px;
-
-    font-size:.68rem;
+    gap:40px;
 
   }
 
   .modal-box{
 
-    padding:32px 24px;
-
-  }
-
-  .modal-price{
-
-    flex-direction:column;
-
-    align-items:flex-start;
+    padding:
+      38px 24px;
 
   }
 
@@ -1893,24 +1479,20 @@ footer p.copy{
 
 
 /* =========================================================
-   REDUCTION DES ANIMATIONS
+   ACCESSIBILITY
    ========================================================= */
 
 @media(prefers-reduced-motion:reduce){
-
-  html{
-
-    scroll-behavior:auto;
-
-  }
 
   *,
   *::before,
   *::after{
 
-    animation:none !important;
+    scroll-behavior:auto !important;
 
     transition:none !important;
+
+    animation:none !important;
 
   }
 
@@ -1920,77 +1502,56 @@ footer p.copy{
 
 </head>
 
-
 <body>
 
-
 <!-- ======================================================
-     NAVIGATION
+     HEADER
      ====================================================== -->
 
 <header>
 
-  <nav>
+<nav>
 
-    <div class="brand">
+<a
+href="#"
+class="brand"
 
-      <svg
-        viewBox="0 0 100 100"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
+>
 
-        <path
-          d="M50 8 A42 42 0 1 1 49.9 8"
-          stroke="#c9a24c"
-          stroke-width="1.4"
-        />
+```
+<img
+  src="./elite_prestige_logo_petit.png"
+  alt="Elite Prestige"
+>
 
-        <text
-          x="50"
-          y="60"
-          font-family="Jost, sans-serif"
-          font-size="34"
-          fill="#e6cf98"
-          text-anchor="middle"
-          font-weight="300"
-        >
-          EP
-        </text>
+<span class="brand-name">
+  ELITE&nbsp;PRESTIGE
+</span>
+```
 
-      </svg>
+  </a>
 
-      <span>
-        ELITE&nbsp;PRESTIGE
-      </span>
+  <div class="navlinks">
 
-    </div>
+```
+<a href="#maison">
+  La Maison
+</a>
 
+<a href="#flotte">
+  La Flotte
+</a>
 
-    <div class="navlinks">
+<a href="#reservation">
+  Réserver
+</a>
+```
 
-      <a href="#maison">
-        La Maison
-      </a>
+  </div>
 
-      <a href="#flotte">
-        Flotte
-      </a>
-
-      <a href="#tarifs">
-        Tarifs
-      </a>
-
-      <a href="#contact">
-        Réserver
-      </a>
-
-    </div>
-
-  </nav>
+</nav>
 
 </header>
-
 
 <!-- ======================================================
      HERO
@@ -2000,79 +1561,47 @@ footer p.copy{
 
   <div class="hero-content">
 
-    <img
-      src="elite_prestige_logo_petit.png"
-      alt="Elite Prestige"
-      class="hero-mark"
-    >
+```
+<img
+  src="./elite_prestige_logo_petit.png"
+  alt="Elite Prestige"
+  class="hero-logo"
+>
 
-    <p class="tagline">
-      Aérien · Terrestre · Maritime
-    </p>
+<p class="hero-tagline">
+  Aérien · Terrestre · Maritime
+</p>
 
-    <div class="hero-rule"></div>
+<div class="hero-line"></div>
 
-    <p class="lede">
-      « Le prestige ne se loue pas, il se vit. »
-    </p>
+<p class="hero-quote">
+  « Le prestige ne se loue pas, il se vit. »
+</p>
 
-    <div class="cta-row">
+<div class="hero-buttons">
 
-      <a
-        href="#flotte"
-        class="btn btn-solid"
-      >
-        Découvrir la flotte
-      </a>
+  <a
+    href="#flotte"
+    class="btn btn-gold"
+  >
+    Découvrir la flotte
+  </a>
 
-      <a
-        href="#contact"
-        class="btn btn-ghost"
-      >
-        Réserver
-      </a>
+  <a
+    href="#reservation"
+    class="btn btn-outline"
+  >
+    Réserver
+  </a>
 
-    </div>
-
-  </div>
-
-
-  <div class="hero-scroll">
-
-    <span></span>
-
-    Découvrir
+</div>
+```
 
   </div>
 
 </section>
 
-
-<div class="wrap">
-
-
-<!-- ======================================================
-     DIVIDER
-     ====================================================== -->
-
-<div class="arc-divider">
-
-  <svg
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-
-    <path
-      d="M50 8 A42 42 0 1 1 49.9 8"
-      stroke="#c9a24c"
-      stroke-width="1"
-    />
-
-  </svg>
-
-</div>
-
+<main>
 
 <!-- ======================================================
      LA MAISON
@@ -2080,57 +1609,38 @@ footer p.copy{
 
 <section id="maison">
 
-  <div class="section-head">
+  <div class="container">
 
-    <span class="eyebrow">
-      La Maison
-    </span>
+```
+<div class="section-title">
 
-    <h2>
-      Une exigence, trois éléments
-    </h2>
+  <span class="eyebrow">
+    La Maison
+  </span>
 
-  </div>
-
-
-  <p class="about-text">
-
-    ELITE PRESTIGE conçoit chaque location comme un
-    <em>moment</em>, pas une simple mise à disposition.
-
-    Hélicoptères, jets, limousines, yachts :
-    une flotte sélectionnée pour un usage privé,
-    professionnel ou événementiel, avec un seul
-    mot d'ordre —
-    la <em>discrétion</em> au niveau du service.
-
-  </p>
-
-</section>
-
-
-<!-- ======================================================
-     DIVIDER
-     ====================================================== -->
-
-<div class="arc-divider">
-
-  <svg
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
-  >
-
-    <path
-      d="M50 8 A42 42 0 1 1 49.9 8"
-      stroke="#c9a24c"
-      stroke-width="1"
-    />
-
-  </svg>
+  <h2>
+    Une exigence, trois éléments
+  </h2>
 
 </div>
 
+
+<p class="intro">
+
+  ELITE PRESTIGE imagine chaque déplacement comme
+  une expérience à part entière.
+
+  Une sélection de véhicules terrestres,
+  d'appareils aériens et d'embarcations pensée
+  pour celles et ceux qui recherchent
+  <em>l'élégance, la discrétion et l'exclusivité.</em>
+
+</p>
+```
+
+  </div>
+
+</section>
 
 <!-- ======================================================
      FLOTTE
@@ -2138,1555 +1648,1469 @@ footer p.copy{
 
 <section id="flotte">
 
-  <div class="section-head">
+<div class="container">
 
-    <span class="eyebrow">
-      La Flotte
-    </span>
+  <div class="section-title">
 
-    <h2>
-      Sélection ELITE PRESTIGE
-    </h2>
+```
+<span class="eyebrow">
+  La Flotte
+</span>
 
-    <p>
-      Une sélection pensée pour les déplacements privés,
-      professionnels et événementiels.
-    </p>
+<h2>
+  L'excellence en mouvement
+</h2>
 
-  </div>
-
-
-<!-- ======================================================
-     AÉRIEN
-     ====================================================== -->
-
-<div class="fleet-group">
-
-  <div class="fleet-group-title">
-
-    <h3>
-      Aérien
-    </h3>
-
-    <div class="line"></div>
+<p>
+  Découvrez notre sélection de modèles FiveM.
+  Chaque véhicule dispose de sa fiche dédiée.
+</p>
+```
 
   </div>
 
-
-  <div class="fleet-grid">
-
-
-    <!-- VOLATUS -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Aérien
-          </span>
-
-          <span class="fleet-number">
-            01
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M6 24h30M28 24l10-3M28 24l10 3M24 8v6M18 14h12M24 24v14M18 40h12"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Volatus
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>25 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Volatus','Aérien','25 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- SWIFT -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Aérien
-          </span>
-
-          <span class="fleet-number">
-            02
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M6 24h30M28 24l10-3M28 24l10 3M24 8v6M18 14h12M24 24v14M18 40h12"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Swift Deluxe
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>20 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Swift Deluxe','Aérien','20 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- VESTRA -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Aérien
-          </span>
-
-          <span class="fleet-number">
-            03
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Vestra
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>15 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Vestra','Aérien','15 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- MIMBUS -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Aérien
-          </span>
-
-          <span class="fleet-number">
-            04
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Mimbus
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>30 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Mimbus','Aérien','30 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- SHAMAL -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Aérien
-          </span>
-
-          <span class="fleet-number">
-            05
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Shamal
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>25 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Shamal','Aérien','25 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
+  <!-- FILTRES -->
+
+  <div class="filters">
+
+```
+<button
+  class="filter active"
+  data-filter="all"
+>
+  Tous
+</button>
+
+<button
+  class="filter"
+  data-filter="air"
+>
+  Aérien
+</button>
+
+<button
+  class="filter"
+  data-filter="land"
+>
+  Terrestre
+</button>
+
+<button
+  class="filter"
+  data-filter="sea"
+>
+  Maritime
+</button>
+```
 
   </div>
 
-</div>
-
-
-<!-- ======================================================
-     TERRESTRE
-     ====================================================== -->
-
-<div class="fleet-group">
-
-  <div class="fleet-group-title">
-
-    <h3>
-      Terrestre
-    </h3>
-
-    <div class="line"></div>
-
-  </div>
-
-
-  <div class="fleet-grid">
-
-
-    <!-- THRAX -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Terrestre
-          </span>
-
-          <span class="fleet-number">
-            01
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"
-            />
-
-            <circle
-              cx="14"
-              cy="36"
-              r="3"
-            />
-
-            <circle
-              cx="34"
-              cy="36"
-              r="3"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Thrax
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>50 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Thrax','Terrestre','50 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- ENTITY -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Terrestre
-          </span>
-
-          <span class="fleet-number">
-            02
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"
-            />
-
-            <circle
-              cx="14"
-              cy="36"
-              r="3"
-            />
-
-            <circle
-              cx="34"
-              cy="36"
-              r="3"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Entity MT
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>35 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Entity MT','Terrestre','35 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- VIRTUE -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Terrestre
-          </span>
-
-          <span class="fleet-number">
-            03
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"
-            />
-
-            <circle
-              cx="14"
-              cy="36"
-              r="3"
-            />
-
-            <circle
-              cx="34"
-              cy="36"
-              r="3"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Virtue
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>20 000$</strong>
-            / 24h
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Virtue','Terrestre','20 000$ / 24h')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</div>
-
-
-<!-- ======================================================
-     MARITIME
-     ====================================================== -->
-
-<div class="fleet-group">
-
-  <div class="fleet-group-title">
-
-    <h3>
-      Maritime
-    </h3>
-
-    <div class="line"></div>
-
-  </div>
-
-
-  <div class="fleet-grid">
-
-
-    <!-- SEA RAY -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Maritime
-          </span>
-
-          <span class="fleet-number">
-            01
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Sea Ray L650 Express
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>20 000$</strong>
-            / soirée
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Sea Ray L650 Express','Maritime','20 000$ / soirée')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- MEGA YACHT -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Maritime
-          </span>
-
-          <span class="fleet-number">
-            02
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Mega Yacht
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>150 000$</strong>
-            / soirée
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Mega Yacht','Maritime','150 000$ / soirée')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-    <!-- TORO -->
-
-    <article class="fleet-card">
-
-      <div>
-
-        <div class="fleet-top">
-
-          <span class="fleet-category">
-            Maritime
-          </span>
-
-          <span class="fleet-number">
-            03
-          </span>
-
-        </div>
-
-
-        <div class="fleet-icon">
-
-          <svg
-            viewBox="0 0 48 48"
-            fill="none"
-            stroke="currentColor"
-            stroke-width="1.3"
-          >
-
-            <path
-              d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"
-            />
-
-          </svg>
-
-        </div>
-
-
-        <div class="fleet-info">
-
-          <h4>
-            Toro
-          </h4>
-
-          <div class="fleet-price">
-
-            À partir de
-            <strong>7 000$</strong>
-            / soirée
-
-          </div>
-
-        </div>
-
-      </div>
-
-
-      <div class="fleet-bottom">
-
-        <div class="fleet-line"></div>
-
-        <button
-          class="fleet-action"
-          onclick="openVehicle('Toro','Maritime','7 000$ / soirée')"
-        >
-          Voir le véhicule
-        </button>
-
-      </div>
-
-    </article>
-
-
-  </div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-     DIVIDER
-     ====================================================== -->
-
-<div class="arc-divider">
-
-  <svg
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+  <!-- ====================================================
+       AÉRIEN
+       ==================================================== -->
+
+  <div
+    class="fleet-section"
+    data-group="air"
   >
 
-    <path
-      d="M50 8 A42 42 0 1 1 49.9 8"
-      stroke="#c9a24c"
-      stroke-width="1"
-    />
+```
+<div class="fleet-heading">
 
-  </svg>
+  <h3>
+    Aérien
+  </h3>
 
-</div>
-
-
-<!-- ======================================================
-     TARIFS
-     ====================================================== -->
-
-<section id="tarifs">
-
-  <div class="section-head">
-
-    <span class="eyebrow">
-      Tarifs
-    </span>
-
-    <h2>
-      Grille tarifaire
-    </h2>
-
-  </div>
-
-
-<!-- LOCATION STANDARD -->
-
-<div class="pricing-block">
-
-  <div class="pricing-block-head">
-
-    <h3>
-      Location standard — 24h / Soirée (21h–4h)
-    </h3>
-
-    <p>
-      Location minimum 24h,
-      ou formule soirée sur les véhicules maritimes.
-    </p>
-
-  </div>
-
-
-  <div class="table-scroll">
-
-    <table>
-
-      <thead>
-
-        <tr>
-
-          <th>
-            Véhicule
-          </th>
-
-          <th class="num">
-            24h
-          </th>
-
-          <th class="num">
-            Soirée
-          </th>
-
-        </tr>
-
-      </thead>
-
-
-      <tbody>
-
-        <tr>
-          <td class="name">Volatus</td>
-          <td class="num">25 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Swift Deluxe</td>
-          <td class="num">20 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Vestra</td>
-          <td class="num">15 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mimbus</td>
-          <td class="num">30 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Shamal</td>
-          <td class="num">25 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Sea Ray L650 Express</td>
-          <td class="num">30 000$</td>
-          <td class="num">20 000$</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mega Yacht</td>
-          <td class="num">200 000$</td>
-          <td class="num">150 000$</td>
-        </tr>
-
-        <tr>
-          <td class="name">Toro</td>
-          <td class="num">10 000$</td>
-          <td class="num">7 000$</td>
-        </tr>
-
-        <tr>
-          <td class="name">Thrax</td>
-          <td class="num">50 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Entity MT</td>
-          <td class="num">35 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-        <tr>
-          <td class="name">Virtue</td>
-          <td class="num">20 000$</td>
-          <td class="num">—</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
+  <div class="fleet-heading-line"></div>
 
 </div>
 
 
-<!-- ENTREPRISE -->
+<div class="fleet-grid">
 
-<div class="pricing-block">
 
-  <div class="pricing-block-head">
+  <!-- VOLATUS -->
 
-    <h3>
-      Tarif Entreprise — à l'heure
-    </h3>
-
-    <p>
-      Environ 1/10ᵉ du tarif 24h,
-      applicable à tout véhicule de la flotte.
-      Durée minimale 2h.
-    </p>
-
-  </div>
-
-
-  <div class="table-scroll">
-
-    <table>
-
-      <thead>
-
-        <tr>
-
-          <th>
-            Véhicule
-          </th>
-
-          <th class="num">
-            Tarif horaire
-          </th>
-
-        </tr>
-
-      </thead>
-
-
-      <tbody>
-
-        <tr>
-          <td class="name">Volatus</td>
-          <td class="num">2 500$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Swift Deluxe</td>
-          <td class="num">2 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Vestra</td>
-          <td class="num">1 500$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mimbus</td>
-          <td class="num">3 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Shamal</td>
-          <td class="num">2 500$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Sea Ray L650 Express</td>
-          <td class="num">3 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mega Yacht</td>
-          <td class="num">20 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Toro</td>
-          <td class="num">1 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Thrax</td>
-          <td class="num">5 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Entity MT</td>
-          <td class="num">3 500$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Virtue</td>
-          <td class="num">2 000$/h</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-
-  <p class="note">
-
-    Montants indicatifs calculés sur la base validée
-    (1/10ᵉ du tarif 24h), ajustables selon la politique interne.
-
-  </p>
-
-</div>
-
-
-<!-- TOURNAGE -->
-
-<div class="pricing-block">
-
-  <div class="pricing-block-head">
-
-    <h3>
-      Tarif Tournage — Clip Rap — à l'heure
-    </h3>
-
-    <p>
-      Majoration de +25% sur le tarif entreprise horaire.
-      Durée minimale 2h.
-    </p>
-
-  </div>
-
-
-  <div class="table-scroll">
-
-    <table>
-
-      <thead>
-
-        <tr>
-
-          <th>
-            Véhicule
-          </th>
-
-          <th class="num">
-            Tarif horaire
-          </th>
-
-        </tr>
-
-      </thead>
-
-
-      <tbody>
-
-        <tr>
-          <td class="name">Volatus</td>
-          <td class="num">3 125$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Swift Deluxe</td>
-          <td class="num">2 500$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Vestra</td>
-          <td class="num">1 875$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mimbus</td>
-          <td class="num">3 750$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Shamal</td>
-          <td class="num">3 125$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Sea Ray L650 Express</td>
-          <td class="num">3 750$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Mega Yacht</td>
-          <td class="num">25 000$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Toro</td>
-          <td class="num">1 250$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Thrax</td>
-          <td class="num">6 250$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Entity MT</td>
-          <td class="num">4 375$/h</td>
-        </tr>
-
-        <tr>
-          <td class="name">Virtue</td>
-          <td class="num">2 500$/h</td>
-        </tr>
-
-      </tbody>
-
-    </table>
-
-  </div>
-
-</div>
-
-</section>
-
-
-<!-- ======================================================
-     DIVIDER
-     ====================================================== -->
-
-<div class="arc-divider">
-
-  <svg
-    viewBox="0 0 100 100"
-    fill="none"
-    xmlns="http://www.w3.org/2000/svg"
+  <article
+    class="vehicle-card"
+    data-category="air"
+    data-name="Volatus"
+    data-model="volatus"
   >
 
-    <path
-      d="M50 8 A42 42 0 1 1 49.9 8"
-      stroke="#c9a24c"
-      stroke-width="1"
-    />
+    <div class="vehicle-image">
 
-  </svg>
+      <img
+        src="./images/volatus.jpg"
+        alt="Volatus"
+        onerror="this.style.display='none'"
+      >
 
-</div>
+      <div class="vehicle-overlay"></div>
 
+    </div>
 
-<!-- ======================================================
-     CONTACT
-     ====================================================== -->
+    <div class="vehicle-content">
 
-<section id="contact">
+      <div class="vehicle-top">
 
-  <div class="section-head">
-
-    <span class="eyebrow">
-      Réservation
-    </span>
-
-    <h2>
-      Organiser votre location
-    </h2>
-
-  </div>
-
-
-  <div class="contact-wrap">
-
-
-    <!-- INFORMATIONS -->
-
-    <div class="contact-info">
-
-      <h3>
-        Nous contacter
-      </h3>
-
-      <p>
-
-        Toute réservation se confirme avant mise
-        à disposition du véhicule.
-
-        Merci de préciser le créneau souhaité
-        et le point de rendez-vous.
-
-      </p>
-
-
-      <div class="contact-line">
-
-        <span>
-          Discord
+        <span class="vehicle-category">
+          Aérien
         </span>
 
-        <span>
-          à compléter
+        <span class="vehicle-model">
+          01
         </span>
 
       </div>
 
+      <div class="vehicle-bottom">
 
-      <div class="contact-line">
+        <h4>
+          Volatus
+        </h4>
 
-        <span>
-          Point de RDV
-        </span>
+        <div class="vehicle-code">
+          MODEL · VOLATUS
+        </div>
 
-        <span>
-          à compléter
-        </span>
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
 
-      </div>
+        <div class="vehicle-actions">
 
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Volatus','Aérien','volatus')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
 
-      <div class="contact-line">
-
-        <span>
-          Disponibilité
-        </span>
-
-        <span>
-          24h/24 sur réservation
-        </span>
+        </div>
 
       </div>
 
     </div>
 
-
-    <!-- FORMULAIRE -->
-
-    <form
-      onsubmit="event.preventDefault();"
-    >
+  </article>
 
 
-      <div class="field">
+  <!-- SWIFT DELUXE -->
 
-        <label for="name">
-          Nom / Pseudo RP
-        </label>
+  <article
+    class="vehicle-card"
+    data-category="air"
+    data-name="Swift Deluxe"
+    data-model="swift2"
+  >
 
-        <input
-          id="name"
-          type="text"
-          placeholder="Votre nom"
-        >
+    <div class="vehicle-image">
 
-      </div>
-
-
-      <div class="field">
-
-        <label for="vehicle">
-          Véhicule souhaité
-        </label>
-
-        <select id="vehicle">
-
-          <option>
-            Volatus
-          </option>
-
-          <option>
-            Swift Deluxe
-          </option>
-
-          <option>
-            Vestra
-          </option>
-
-          <option>
-            Mimbus
-          </option>
-
-          <option>
-            Shamal
-          </option>
-
-          <option>
-            Sea Ray L650 Express
-          </option>
-
-          <option>
-            Mega Yacht
-          </option>
-
-          <option>
-            Toro
-          </option>
-
-          <option>
-            Thrax
-          </option>
-
-          <option>
-            Entity MT
-          </option>
-
-          <option>
-            Virtue
-          </option>
-
-        </select>
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="formula">
-          Formule
-        </label>
-
-        <select id="formula">
-
-          <option>
-            24h
-          </option>
-
-          <option>
-            Soirée (21h–4h)
-          </option>
-
-          <option>
-            Tarif Entreprise (horaire)
-          </option>
-
-          <option>
-            Tournage Clip Rap (horaire)
-          </option>
-
-        </select>
-
-      </div>
-
-
-      <div class="field">
-
-        <label for="msg">
-          Message
-        </label>
-
-        <textarea
-          id="msg"
-          placeholder="Date, créneau, point de RDV..."
-        ></textarea>
-
-      </div>
-
-
-      <button
-        type="submit"
-        class="btn btn-solid"
+      <img
+        src="./images/swift2.jpg"
+        alt="Swift Deluxe"
+        onerror="this.style.display='none'"
       >
-        Envoyer la demande
-      </button>
 
-    </form>
+      <div class="vehicle-overlay"></div>
 
-  </div>
+    </div>
 
-</section>
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Aérien
+        </span>
+
+        <span class="vehicle-model">
+          02
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Swift Deluxe
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · SWIFT2
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Swift Deluxe','Aérien','swift2')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- LUXOR DELUXE -->
+
+  <article
+    class="vehicle-card"
+    data-category="air"
+    data-name="Luxor Deluxe"
+    data-model="luxor2"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/luxor2.jpg"
+        alt="Luxor Deluxe"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Aérien
+        </span>
+
+        <span class="vehicle-model">
+          03
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Luxor Deluxe
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · LUXOR2
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Luxor Deluxe','Aérien','luxor2')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- SHAMAL -->
+
+  <article
+    class="vehicle-card"
+    data-category="air"
+    data-name="Shamal"
+    data-model="shamal"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/shamal.jpg"
+        alt="Shamal"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Aérien
+        </span>
+
+        <span class="vehicle-model">
+          04
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Shamal
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · SHAMAL
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Shamal','Aérien','shamal')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- VESTRA -->
+
+  <article
+    class="vehicle-card"
+    data-category="air"
+    data-name="Vestra"
+    data-model="vestra"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/vestra.jpg"
+        alt="Vestra"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Aérien
+        </span>
+
+        <span class="vehicle-model">
+          05
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Vestra
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · VESTRA
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Vestra','Aérien','vestra')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
 
 
 </div>
+```
 
+  </div>
+
+  <!-- ====================================================
+       TERRESTRE
+       ==================================================== -->
+
+  <div
+    class="fleet-section"
+    data-group="land"
+  >
+
+```
+<div class="fleet-heading">
+
+  <h3>
+    Terrestre
+  </h3>
+
+  <div class="fleet-heading-line"></div>
+
+</div>
+
+
+<div class="fleet-grid">
+
+
+  <!-- THRAX -->
+
+  <article
+    class="vehicle-card"
+    data-category="land"
+    data-name="Thrax"
+    data-model="thrax"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/thrax.jpg"
+        alt="Thrax"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Terrestre
+        </span>
+
+        <span class="vehicle-model">
+          01
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Thrax
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · THRAX
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Thrax','Terrestre','thrax')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- ENTITY MT -->
+
+  <article
+    class="vehicle-card"
+    data-category="land"
+    data-name="Entity MT"
+    data-model="entity3"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/entity3.jpg"
+        alt="Entity MT"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Terrestre
+        </span>
+
+        <span class="vehicle-model">
+          02
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Entity MT
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · ENTITY3
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Entity MT','Terrestre','entity3')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- VIRTUE -->
+
+  <article
+    class="vehicle-card"
+    data-category="land"
+    data-name="Virtue"
+    data-model="virtue"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/virtue.jpg"
+        alt="Virtue"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Terrestre
+        </span>
+
+        <span class="vehicle-model">
+          03
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Virtue
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · VIRTUE
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Virtue','Terrestre','virtue')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- TORERO XO -->
+
+  <article
+    class="vehicle-card"
+    data-category="land"
+    data-name="Torero XO"
+    data-model="torero2"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/torero2.jpg"
+        alt="Torero XO"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Terrestre
+        </span>
+
+        <span class="vehicle-model">
+          04
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Torero XO
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · TORERO2
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Torero XO','Terrestre','torero2')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- TURISMO OMAGGIO -->
+
+  <article
+    class="vehicle-card"
+    data-category="land"
+    data-name="Turismo Omaggio"
+    data-model="turismo3"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/turismo3.jpg"
+        alt="Turismo Omaggio"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Terrestre
+        </span>
+
+        <span class="vehicle-model">
+          05
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Turismo Omaggio
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · TURISMO3
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Turismo Omaggio','Terrestre','turismo3')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+  <!-- ====================================================
+       MARITIME
+       ==================================================== -->
+
+  <div
+    class="fleet-section"
+    data-group="sea"
+  >
+
+```
+<div class="fleet-heading">
+
+  <h3>
+    Maritime
+  </h3>
+
+  <div class="fleet-heading-line"></div>
+
+</div>
+
+
+<div class="fleet-grid">
+
+
+  <!-- TORO -->
+
+  <article
+    class="vehicle-card"
+    data-category="sea"
+    data-name="Toro"
+    data-model="toro"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/toro.jpg"
+        alt="Toro"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Maritime
+        </span>
+
+        <span class="vehicle-model">
+          01
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Toro
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · TORO
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Toro','Maritime','toro')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- SPEEDER -->
+
+  <article
+    class="vehicle-card"
+    data-category="sea"
+    data-name="Speeder"
+    data-model="speeder"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/speeder.jpg"
+        alt="Speeder"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Maritime
+        </span>
+
+        <span class="vehicle-model">
+          02
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Speeder
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · SPEEDER
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Speeder','Maritime','speeder')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- SQUALO -->
+
+  <article
+    class="vehicle-card"
+    data-category="sea"
+    data-name="Squalo"
+    data-model="squalo"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/squalo.jpg"
+        alt="Squalo"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Maritime
+        </span>
+
+        <span class="vehicle-model">
+          03
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Squalo
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · SQUALO
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Squalo','Maritime','squalo')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- TROPIC -->
+
+  <article
+    class="vehicle-card"
+    data-category="sea"
+    data-name="Tropic"
+    data-model="tropic"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/tropic.jpg"
+        alt="Tropic"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Maritime
+        </span>
+
+        <span class="vehicle-model">
+          04
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Tropic
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · TROPIC
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Tropic','Maritime','tropic')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+  <!-- TUG -->
+
+  <article
+    class="vehicle-card"
+    data-category="sea"
+    data-name="Tug"
+    data-model="tug"
+  >
+
+    <div class="vehicle-image">
+
+      <img
+        src="./images/tug.jpg"
+        alt="Tug"
+        onerror="this.style.display='none'"
+      >
+
+      <div class="vehicle-overlay"></div>
+
+    </div>
+
+    <div class="vehicle-content">
+
+      <div class="vehicle-top">
+
+        <span class="vehicle-category">
+          Maritime
+        </span>
+
+        <span class="vehicle-model">
+          05
+        </span>
+
+      </div>
+
+      <div class="vehicle-bottom">
+
+        <h4>
+          Tug
+        </h4>
+
+        <div class="vehicle-code">
+          MODEL · TUG
+        </div>
+
+        <div class="vehicle-price">
+          Tarif :
+          <strong>
+            Sur devis
+          </strong>
+        </div>
+
+        <div class="vehicle-actions">
+
+          <button
+            class="vehicle-button"
+            onclick="openVehicle('Tug','Maritime','tug')"
+          >
+            Voir le véhicule
+            <span></span>
+          </button>
+
+        </div>
+
+      </div>
+
+    </div>
+
+  </article>
+
+
+</div>
+```
+
+  </div>
+
+  <p class="fleet-note">
+
+```
+Les modèles présentés correspondent aux références
+de véhicules FiveM utilisées pour constituer la flotte.
+Les tarifs et conditions de location sont à définir.
+```
+
+  </p>
+
+</div>
+
+</section>
+
+<!-- ======================================================
+     RÉSERVATION
+     ====================================================== -->
+
+<section id="reservation">
+
+<div class="container">
+
+  <div class="section-title">
+
+```
+<span class="eyebrow">
+  Réservation
+</span>
+
+<h2>
+  Organiser votre expérience
+</h2>
+
+<p>
+  Sélectionnez votre véhicule et indiquez-nous
+  les détails de votre demande.
+</p>
+```
+
+  </div>
+
+  <div class="reservation">
+
+```
+<div class="reservation-copy">
+
+  <h3>
+    Un service sur mesure
+  </h3>
+
+  <p>
+
+    Chaque demande est étudiée individuellement.
+    La disponibilité, la durée et les conditions
+    sont confirmées avant validation.
+
+  </p>
+
+
+  <div class="contact-details">
+
+    <div class="contact-item">
+
+      <span>
+        Discord
+      </span>
+
+      <span>
+        À compléter
+      </span>
+
+    </div>
+
+
+    <div class="contact-item">
+
+      <span>
+        Disponibilité
+      </span>
+
+      <span>
+        Sur réservation
+      </span>
+
+    </div>
+
+
+    <div class="contact-item">
+
+      <span>
+        Localisation
+      </span>
+
+      <span>
+        À compléter
+      </span>
+
+    </div>
+
+  </div>
+
+</div>
+
+
+<form
+  class="form"
+  id="reservationForm"
+>
+
+
+  <div class="field">
+
+    <label for="clientName">
+      Nom / Pseudo RP
+    </label>
+
+    <input
+      id="clientName"
+      type="text"
+      placeholder="Votre nom"
+      required
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="vehicleSelect">
+      Véhicule
+    </label>
+
+    <select
+      id="vehicleSelect"
+      required
+    >
+
+      <option value="">
+        Sélectionner
+      </option>
+
+      <option>
+        Volatus
+      </option>
+
+      <option>
+        Swift Deluxe
+      </option>
+
+      <option>
+        Luxor Deluxe
+      </option>
+
+      <option>
+        Shamal
+      </option>
+
+      <option>
+        Vestra
+      </option>
+
+      <option>
+        Thrax
+      </option>
+
+      <option>
+        Entity MT
+      </option>
+
+      <option>
+        Virtue
+      </option>
+
+      <option>
+        Torero XO
+      </option>
+
+      <option>
+        Turismo Omaggio
+      </option>
+
+      <option>
+        Toro
+      </option>
+
+      <option>
+        Speeder
+      </option>
+
+      <option>
+        Squalo
+      </option>
+
+      <option>
+        Tropic
+      </option>
+
+      <option>
+        Tug
+      </option>
+
+    </select>
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="date">
+      Date souhaitée
+    </label>
+
+    <input
+      id="date"
+      type="date"
+      required
+    >
+
+  </div>
+
+
+  <div class="field">
+
+    <label for="message">
+      Votre demande
+    </label>
+
+    <textarea
+      id="message"
+      placeholder="Durée, horaire, lieu, événement..."
+      required
+    ></textarea>
+
+  </div>
+
+
+  <button
+    type="submit"
+    class="btn btn-gold"
+  >
+    Envoyer la demande
+  </button>
+
+
+</form>
+```
+
+  </div>
+
+</div>
+
+</section>
+
+</main>
 
 <!-- ======================================================
      FOOTER
@@ -3694,193 +3118,217 @@ footer p.copy{
 
 <footer>
 
-  <div class="brand">
+<img
+src="./elite_prestige_logo_petit.png"
+alt="Elite Prestige"
+class="footer-logo"
 
-    <svg
-      viewBox="0 0 100 100"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-      width="26"
-      height="26"
-    >
-
-      <path
-        d="M50 8 A42 42 0 1 1 49.9 8"
-        stroke="#c9a24c"
-        stroke-width="1.4"
-      />
-
-      <text
-        x="50"
-        y="60"
-        font-family="Jost, sans-serif"
-        font-size="34"
-        fill="#e6cf98"
-        text-anchor="middle"
-        font-weight="300"
-      >
-        EP
-      </text>
-
-    </svg>
-
-
-    <span
-      style="
-        font-family:'Jost',sans-serif;
-        letter-spacing:.3em;
-        font-size:.85rem;
-      "
-    >
-      ELITE&nbsp;PRESTIGE
-    </span>
-
-  </div>
-
+>
 
   <p>
     Aérien · Terrestre · Maritime
   </p>
 
-
-  <p class="copy">
-    Entreprise fictive — univers roleplay GTARP / FiveM
+  <p class="copyright">
+    ELITE PRESTIGE · Univers Roleplay
   </p>
 
 </footer>
 
-
 <!-- ======================================================
-     MODALE VEHICULE
+     MODAL
      ====================================================== -->
 
 <div
-  class="vehicle-modal"
+  class="modal"
   id="vehicleModal"
   aria-hidden="true"
 >
 
   <div class="modal-box">
 
-    <button
-      class="modal-close"
-      onclick="closeVehicle()"
-      aria-label="Fermer"
-    >
-      ×
-    </button>
+```
+<button
+  class="modal-close"
+  onclick="closeVehicle()"
+  aria-label="Fermer"
+>
+  ×
+</button>
 
 
-    <div
-      class="modal-eyebrow"
-      id="modalCategory"
-    >
-      Aérien
-    </div>
+<div
+  class="modal-category"
+  id="modalCategory"
+>
+  Aérien
+</div>
 
 
-    <h2
-      class="modal-title"
-      id="modalTitle"
-    >
-      Volatus
-    </h2>
+<h2 id="modalTitle">
+  Volatus
+</h2>
 
 
-    <div class="modal-rule"></div>
+<div class="modal-line"></div>
 
 
-    <p class="modal-text">
+<p>
 
-      Ce véhicule fait partie de la sélection
-      ELITE PRESTIGE.
+  Ce modèle fait partie de la sélection
+  ELITE PRESTIGE.
 
-      Pour connaître les conditions de mise à disposition,
-      le créneau souhaité et les modalités de réservation,
-      contactez notre équipe.
+  Les modalités de location sont confirmées
+  lors de la réservation selon la disponibilité,
+  la durée et l'utilisation souhaitée.
 
-    </p>
-
-
-    <div class="modal-price">
-
-      <span>
-        Tarif indicatif
-      </span>
-
-      <strong id="modalPrice">
-        25 000$ / 24h
-      </strong>
-
-    </div>
+</p>
 
 
-    <div
-      style="
-        margin-top:25px;
-        display:flex;
-        gap:12px;
-        flex-wrap:wrap;
-      "
-    >
+<div
+  class="modal-code"
+  id="modalCode"
+>
+  MODEL · VOLATUS
+</div>
 
-      <a
-        href="#contact"
-        class="btn btn-solid"
-        onclick="closeVehicle()"
-      >
-        Réserver
-      </a>
 
-      <button
-        class="btn btn-ghost"
-        onclick="closeVehicle()"
-      >
-        Fermer
-      </button>
+<div
+  class="modal-price"
+  id="modalPrice"
+>
+  Tarif : Sur devis
+</div>
 
-    </div>
+
+<div class="modal-buttons">
+
+  <a
+    href="#reservation"
+    class="btn btn-gold"
+    onclick="closeVehicle()"
+  >
+    Réserver ce véhicule
+  </a>
+
+  <button
+    class="btn btn-outline"
+    onclick="closeVehicle()"
+  >
+    Fermer
+  </button>
+
+</div>
+```
 
   </div>
 
 </div>
 
-
-<!-- ======================================================
-     JAVASCRIPT
-     ====================================================== -->
-
 <script>
 
 /* =========================================================
-   MODALE VEHICULE
+   FILTRES
+   ========================================================= */
+
+const filters =
+  document.querySelectorAll(
+    ".filter"
+  );
+
+const groups =
+  document.querySelectorAll(
+    ".fleet-section"
+  );
+
+filters.forEach(
+  filter => {
+
+    filter.addEventListener(
+      "click",
+      () => {
+
+        filters.forEach(
+          item =>
+            item.classList.remove(
+              "active"
+            )
+        );
+
+        filter.classList.add(
+          "active"
+        );
+
+        const selected =
+          filter.dataset.filter;
+
+
+        groups.forEach(
+          group => {
+
+            const category =
+              group.dataset.group;
+
+            if(
+              selected === "all"
+              ||
+              selected === category
+            ){
+
+              group.style.display =
+                "";
+
+            }else{
+
+              group.style.display =
+                "none";
+
+            }
+
+          }
+        );
+
+      }
+    );
+
+  }
+);
+
+
+/* =========================================================
+   MODALE
    ========================================================= */
 
 const modal =
   document.getElementById(
-    'vehicleModal'
+    "vehicleModal"
   );
 
 const modalTitle =
   document.getElementById(
-    'modalTitle'
+    "modalTitle"
   );
 
 const modalCategory =
   document.getElementById(
-    'modalCategory'
+    "modalCategory"
+  );
+
+const modalCode =
+  document.getElementById(
+    "modalCode"
   );
 
 const modalPrice =
   document.getElementById(
-    'modalPrice'
+    "modalPrice"
   );
 
 
 function openVehicle(
   name,
   category,
-  price
+  model
 ){
 
   modalTitle.textContent =
@@ -3889,21 +3337,56 @@ function openVehicle(
   modalCategory.textContent =
     category;
 
+  modalCode.textContent =
+    "MODEL · "
+    +
+    model.toUpperCase();
+
   modalPrice.textContent =
-    price;
+    "Tarif : Sur devis";
+
 
   modal.classList.add(
-    'active'
+    "open"
   );
 
   modal.setAttribute(
-    'aria-hidden',
-    'false'
+    "aria-hidden",
+    "false"
   );
 
   document.body.classList.add(
-    'modal-open'
+    "modal-open"
   );
+
+
+  const select =
+    document.getElementById(
+      "vehicleSelect"
+    );
+
+
+  if(select){
+
+    [...select.options]
+      .forEach(
+        option => {
+
+          if(
+            option.text.trim()
+            ===
+            name.trim()
+          ){
+
+            select.value =
+              option.text;
+
+          }
+
+        }
+      );
+
+  }
 
 }
 
@@ -3911,28 +3394,24 @@ function openVehicle(
 function closeVehicle(){
 
   modal.classList.remove(
-    'active'
+    "open"
   );
 
   modal.setAttribute(
-    'aria-hidden',
-    'true'
+    "aria-hidden",
+    "true"
   );
 
   document.body.classList.remove(
-    'modal-open'
+    "modal-open"
   );
 
 }
 
 
-/* =========================================================
-   FERMETURE EN CLIQUANT EN DEHORS
-   ========================================================= */
-
 modal.addEventListener(
-  'click',
-  function(event){
+  "click",
+  event => {
 
     if(
       event.target === modal
@@ -3946,16 +3425,12 @@ modal.addEventListener(
 );
 
 
-/* =========================================================
-   FERMETURE AVEC ESC
-   ========================================================= */
-
 document.addEventListener(
-  'keydown',
-  function(event){
+  "keydown",
+  event => {
 
     if(
-      event.key === 'Escape'
+      event.key === "Escape"
     ){
 
       closeVehicle();
@@ -3971,25 +3446,56 @@ document.addEventListener(
    ========================================================= */
 
 const form =
-  document.querySelector(
-    'form'
+  document.getElementById(
+    "reservationForm"
   );
 
+
 form.addEventListener(
-  'submit',
-  function(event){
+  "submit",
+  event => {
 
     event.preventDefault();
 
+
+    const name =
+      document.getElementById(
+        "clientName"
+      ).value;
+
+    const vehicle =
+      document.getElementById(
+        "vehicleSelect"
+      ).value;
+
+    const date =
+      document.getElementById(
+        "date"
+      ).value;
+
+
     alert(
-      'Votre demande a bien été préparée. Le système de réservation sera connecté prochainement.'
+      "Demande enregistrée pour "
+      +
+      name
+      +
+      " — "
+      +
+      vehicle
+      +
+      " — "
+      +
+      date
+      +
+      ".\n\n"
+      +
+      "La connexion au système de réservation sera ajoutée dans une prochaine étape."
     );
 
   }
 );
 
 </script>
-
 
 </body>
 
