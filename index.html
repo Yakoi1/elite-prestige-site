@@ -1,0 +1,537 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>ELITE PRESTIGE — Aérien · Terrestre · Maritime</title>
+<link rel="icon" href="elite_prestige_logo.png">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,400&family=Jost:wght@200;300;400;500&family=Work+Sans:wght@300;400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0b0b0d;
+    --bg-alt:#111113;
+    --bg-card:#141416;
+    --gold:#c9a24c;
+    --gold-soft:#e6cf98;
+    --cream:#f3eee5;
+    --gray:#8c8c91;
+    --line:rgba(243,238,229,0.12);
+    --line-gold:rgba(201,162,76,0.4);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{
+    background:var(--bg);
+    color:var(--cream);
+    font-family:'Work Sans', sans-serif;
+    font-weight:300;
+    line-height:1.6;
+    -webkit-font-smoothing:antialiased;
+  }
+  ::selection{background:var(--gold);color:#0b0b0d;}
+  a{color:inherit;text-decoration:none;}
+  .eyebrow{
+    font-family:'Jost', sans-serif;
+    font-weight:400;
+    letter-spacing:0.35em;
+    text-transform:uppercase;
+    font-size:0.72rem;
+    color:var(--gold);
+  }
+  h1,h2,h3{
+    font-family:'Jost', sans-serif;
+    font-weight:300;
+    letter-spacing:0.12em;
+    text-transform:uppercase;
+    color:var(--cream);
+  }
+  .serif{font-family:'Cormorant Garamond', serif;}
+  .wrap{max-width:1180px;margin:0 auto;padding:0 40px;}
+  @media(max-width:640px){.wrap{padding:0 22px;}}
+
+  /* ---------- NAV ---------- */
+  header{
+    position:fixed;top:0;left:0;right:0;z-index:50;
+    background:rgba(11,11,13,0.75);
+    backdrop-filter:blur(10px);
+    border-bottom:1px solid var(--line);
+  }
+  nav{
+    max-width:1180px;margin:0 auto;padding:18px 40px;
+    display:flex;align-items:center;justify-content:space-between;
+  }
+  @media(max-width:640px){nav{padding:16px 22px;}}
+  .brand{display:flex;align-items:center;gap:12px;}
+  .brand svg{width:30px;height:30px;flex-shrink:0;}
+  .brand span{
+    font-family:'Jost', sans-serif;font-size:0.95rem;
+    letter-spacing:0.3em;color:var(--cream);font-weight:400;
+  }
+  .navlinks{display:flex;gap:38px;}
+  .navlinks a{
+    font-family:'Jost', sans-serif;font-size:0.72rem;letter-spacing:0.2em;
+    text-transform:uppercase;color:var(--gray);transition:color .25s;
+  }
+  .navlinks a:hover{color:var(--gold);}
+  @media(max-width:800px){.navlinks{display:none;}}
+
+  /* ---------- HERO ---------- */
+  .hero{
+    min-height:100vh;display:flex;flex-direction:column;align-items:center;justify-content:center;
+    text-align:center;position:relative;padding:160px 24px 100px;
+    background:
+      radial-gradient(ellipse at 50% 30%, rgba(201,162,76,0.09), transparent 60%),
+      var(--bg);
+  }
+  .hero-mark{width:170px;height:auto;margin-bottom:38px;opacity:0.96;}
+  .hero h1{font-size:clamp(2.1rem,6vw,3.6rem);letter-spacing:0.14em;}
+  .hero-rule{width:64px;height:1px;background:var(--line-gold);margin:26px auto;}
+  .hero p.tagline{
+    font-family:'Jost',sans-serif;font-weight:300;letter-spacing:0.42em;
+    text-transform:uppercase;font-size:0.78rem;color:var(--gray);margin-bottom:30px;
+  }
+  .hero p.lede{
+    max-width:560px;font-size:1.08rem;color:#c9c5ba;font-weight:300;
+    font-family:'Cormorant Garamond',serif;font-size:1.35rem;font-style:italic;line-height:1.7;
+  }
+  .cta-row{display:flex;gap:18px;margin-top:44px;flex-wrap:wrap;justify-content:center;}
+  .btn{
+    font-family:'Jost',sans-serif;font-size:0.74rem;letter-spacing:0.22em;text-transform:uppercase;
+    padding:16px 34px;border:1px solid var(--line-gold);transition:all .3s;
+  }
+  .btn-solid{background:var(--gold);color:#0b0b0d;border-color:var(--gold);}
+  .btn-solid:hover{background:var(--gold-soft);border-color:var(--gold-soft);}
+  .btn-ghost{color:var(--cream);}
+  .btn-ghost:hover{border-color:var(--gold);color:var(--gold);}
+
+  /* ---------- ARC DIVIDER ---------- */
+  .arc-divider{display:flex;justify-content:center;padding:64px 0;}
+  .arc-divider svg{width:56px;height:56px;opacity:0.55;}
+
+  /* ---------- SECTION GENERIC ---------- */
+  section{padding:20px 0 90px;}
+  .section-head{text-align:center;margin-bottom:64px;}
+  .section-head .eyebrow{display:block;margin-bottom:16px;}
+  .section-head h2{font-size:clamp(1.5rem,3.4vw,2.1rem);}
+  .section-head p{
+    max-width:600px;margin:22px auto 0;color:var(--gray);font-size:0.98rem;font-weight:300;
+  }
+
+  /* ---------- ABOUT ---------- */
+  .about-text{
+    max-width:760px;margin:0 auto;text-align:center;
+    font-family:'Cormorant Garamond',serif;font-size:1.5rem;font-weight:300;
+    color:#ddd7c9;line-height:1.75;
+  }
+  .about-text em{color:var(--gold-soft);font-style:italic;}
+
+  /* ---------- FLEET ---------- */
+  .fleet-group{margin-bottom:70px;}
+  .fleet-group-title{
+    display:flex;align-items:center;gap:18px;margin-bottom:34px;
+  }
+  .fleet-group-title .line{flex:1;height:1px;background:var(--line);}
+  .fleet-group-title h3{font-size:0.95rem;letter-spacing:0.28em;color:var(--gold-soft);white-space:nowrap;}
+  .fleet-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1px;background:var(--line);}
+  .fleet-card{
+    background:var(--bg-card);padding:38px 28px;display:flex;flex-direction:column;gap:16px;
+    transition:background .3s;
+  }
+  .fleet-card:hover{background:#17171a;}
+  .fleet-card .icon{width:34px;height:34px;color:var(--gold);}
+  .fleet-card .icon svg{width:100%;height:100%;}
+  .fleet-card h4{
+    font-family:'Jost',sans-serif;font-weight:400;letter-spacing:0.08em;
+    font-size:1.05rem;color:var(--cream);text-transform:none;
+  }
+  .fleet-card .price{
+    margin-top:auto;font-family:'Jost',sans-serif;font-size:0.78rem;
+    letter-spacing:0.08em;color:var(--gray);
+  }
+  .fleet-card .price b{color:var(--gold);font-weight:500;}
+
+  /* ---------- PRICING ---------- */
+  .pricing-block{margin-bottom:60px;}
+  .pricing-block-head{margin-bottom:26px;}
+  .pricing-block-head h3{font-size:1rem;letter-spacing:0.2em;color:var(--cream);}
+  .pricing-block-head p{color:var(--gray);font-size:0.88rem;margin-top:8px;font-family:'Work Sans';font-weight:300;}
+  table{width:100%;border-collapse:collapse;}
+  th{
+    text-align:left;font-family:'Jost',sans-serif;font-weight:400;font-size:0.68rem;
+    letter-spacing:0.18em;text-transform:uppercase;color:var(--gray);
+    padding:14px 18px;border-bottom:1px solid var(--line-gold);
+  }
+  td{
+    padding:16px 18px;border-bottom:1px solid var(--line);font-size:0.94rem;font-weight:300;
+  }
+  td.name{color:var(--cream);font-family:'Jost',sans-serif;font-weight:400;letter-spacing:0.03em;}
+  td.num{color:var(--gold-soft);text-align:right;font-family:'Jost',sans-serif;}
+  th.num{text-align:right;}
+  tr:last-child td{border-bottom:none;}
+  .note{
+    margin-top:16px;color:var(--gray);font-size:0.82rem;font-style:italic;
+    font-family:'Cormorant Garamond',serif;
+  }
+  .table-scroll{overflow-x:auto;}
+
+  /* ---------- CONTACT ---------- */
+  .contact-wrap{
+    display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:start;
+  }
+  @media(max-width:820px){.contact-wrap{grid-template-columns:1fr;gap:50px;}}
+  .contact-info h3{font-size:1.1rem;letter-spacing:0.1em;margin-bottom:20px;}
+  .contact-info p{color:var(--gray);font-size:0.95rem;font-weight:300;margin-bottom:26px;}
+  .contact-line{
+    display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid var(--line);
+    font-family:'Jost',sans-serif;font-size:0.8rem;letter-spacing:0.08em;
+  }
+  .contact-line span:first-child{color:var(--gray);text-transform:uppercase;font-size:0.7rem;letter-spacing:0.2em;}
+  .contact-line span:last-child{color:var(--gold-soft);}
+
+  form{display:flex;flex-direction:column;gap:18px;}
+  .field{display:flex;flex-direction:column;gap:8px;}
+  .field label{
+    font-family:'Jost',sans-serif;font-size:0.68rem;letter-spacing:0.2em;text-transform:uppercase;color:var(--gray);
+  }
+  .field input, .field select, .field textarea{
+    background:var(--bg-card);border:1px solid var(--line);color:var(--cream);
+    padding:14px 16px;font-family:'Work Sans';font-size:0.92rem;font-weight:300;
+    outline:none;transition:border-color .25s;
+  }
+  .field input:focus, .field select:focus, .field textarea:focus{border-color:var(--gold);}
+  .field textarea{resize:vertical;min-height:90px;}
+  form .btn{align-self:flex-start;margin-top:6px;cursor:pointer;}
+
+  /* ---------- FOOTER ---------- */
+  footer{
+    border-top:1px solid var(--line);padding:50px 0;text-align:center;
+  }
+  footer .brand{justify-content:center;margin-bottom:16px;}
+  footer p{color:var(--gray);font-size:0.72rem;letter-spacing:0.15em;font-family:'Jost',sans-serif;text-transform:uppercase;}
+  footer p.copy{margin-top:10px;color:#5c5c60;}
+</style>
+</head>
+<body>
+
+<header>
+  <nav>
+    <div class="brand">
+      <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1.4"/>
+        <text x="50" y="60" font-family="Jost, sans-serif" font-size="34" fill="#e6cf98" text-anchor="middle" font-weight="300">EP</text>
+      </svg>
+      <span>ELITE&nbsp;PRESTIGE</span>
+    </div>
+    <div class="navlinks">
+      <a href="#maison">La Maison</a>
+      <a href="#flotte">Flotte</a>
+      <a href="#tarifs">Tarifs</a>
+      <a href="#contact">Réserver</a>
+    </div>
+  </nav>
+</header>
+
+<section class="hero">
+  <img src="elite_prestige_logo.png" alt="Elite Prestige" class="hero-mark">
+  <p class="tagline">Aérien · Terrestre · Maritime</p>
+  <div class="hero-rule"></div>
+  <p class="lede">« Le prestige ne se loue pas, il se vit. »</p>
+  <div class="cta-row">
+    <a href="#flotte" class="btn btn-solid">Découvrir la flotte</a>
+    <a href="#contact" class="btn btn-ghost">Réserver</a>
+  </div>
+</section>
+
+<div class="wrap">
+
+  <div class="arc-divider">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <section id="maison">
+    <div class="section-head">
+      <span class="eyebrow">La Maison</span>
+      <h2>Une exigence, trois éléments</h2>
+    </div>
+    <p class="about-text">
+      ELITE PRESTIGE conçoit chaque location comme un <em>moment</em>, pas une simple mise à disposition.
+      Hélicoptères, jets, limousines, yachts&nbsp;: une flotte sélectionnée pour un usage privé,
+      professionnel ou événementiel, avec un seul mot d'ordre — la <em>discrétion</em> au niveau du service.
+    </p>
+  </section>
+
+  <div class="arc-divider">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <section id="flotte">
+    <div class="section-head">
+      <span class="eyebrow">La Flotte</span>
+      <h2>Sélection ELITE PRESTIGE</h2>
+      <p>Tarifs affichés en location 24h. Détail complet, incluant la formule soirée, en section Tarifs.</p>
+    </div>
+
+    <!-- AERIEN -->
+    <div class="fleet-group">
+      <div class="fleet-group-title">
+        <h3>Aérien</h3><div class="line"></div>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 24h30M28 24l10-3M28 24l10 3M24 8v6M18 14h12M24 24v14M18 40h12"/></svg>
+          </div>
+          <h4>Volatus</h4>
+          <div class="price">À partir de <b>25 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 24h30M28 24l10-3M28 24l10 3M24 8v6M18 14h12M24 24v14M18 40h12"/></svg>
+          </div>
+          <h4>Swift Deluxe</h4>
+          <div class="price">À partir de <b>20 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"/></svg>
+          </div>
+          <h4>Vestra</h4>
+          <div class="price">À partir de <b>15 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"/></svg>
+          </div>
+          <h4>Mimbus</h4>
+          <div class="price">À partir de <b>30 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M4 28l40-8-6 8 6 8-40-8zM18 20v16"/></svg>
+          </div>
+          <h4>Shamal</h4>
+          <div class="price">À partir de <b>25 000$</b> / 24h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- TERRESTRE -->
+    <div class="fleet-group">
+      <div class="fleet-group-title">
+        <h3>Terrestre</h3><div class="line"></div>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"/><circle cx="14" cy="36" r="3"/><circle cx="34" cy="36" r="3"/></svg>
+          </div>
+          <h4>Thrax</h4>
+          <div class="price">À partir de <b>50 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"/><circle cx="14" cy="36" r="3"/><circle cx="34" cy="36" r="3"/></svg>
+          </div>
+          <h4>Entity MT</h4>
+          <div class="price">À partir de <b>35 000$</b> / 24h</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M6 30l4-10a4 4 0 0 1 4-3h20a4 4 0 0 1 4 3l4 10v6H6z"/><circle cx="14" cy="36" r="3"/><circle cx="34" cy="36" r="3"/></svg>
+          </div>
+          <h4>Virtue</h4>
+          <div class="price">À partir de <b>20 000$</b> / 24h</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- MARITIME -->
+    <div class="fleet-group">
+      <div class="fleet-group-title">
+        <h3>Maritime</h3><div class="line"></div>
+      </div>
+      <div class="fleet-grid">
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"/></svg>
+          </div>
+          <h4>Sea Ray L650 Express</h4>
+          <div class="price">À partir de <b>20 000$</b> / soirée</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"/></svg>
+          </div>
+          <h4>Mega Yacht</h4>
+          <div class="price">À partir de <b>150 000$</b> / soirée</div>
+        </div>
+        <div class="fleet-card">
+          <div class="icon">
+            <svg viewBox="0 0 48 48" fill="none" stroke="currentColor" stroke-width="1.3"><path d="M8 30h32l-4 8H12zM14 30V14h10l6 16M20 14V8"/></svg>
+          </div>
+          <h4>Toro</h4>
+          <div class="price">À partir de <b>7 000$</b> / soirée</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <div class="arc-divider">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <section id="tarifs">
+    <div class="section-head">
+      <span class="eyebrow">Tarifs</span>
+      <h2>Grille tarifaire</h2>
+    </div>
+
+    <div class="pricing-block">
+      <div class="pricing-block-head">
+        <h3>Location standard — 24h / Soirée (21h–4h)</h3>
+        <p>Location minimum 24h, ou formule soirée sur les véhicules maritimes.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Véhicule</th><th class="num">24h</th><th class="num">Soirée</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Volatus</td><td class="num">25 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Swift Deluxe</td><td class="num">20 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Vestra</td><td class="num">15 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Mimbus</td><td class="num">30 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Shamal</td><td class="num">25 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Sea Ray L650 Express</td><td class="num">30 000$</td><td class="num">20 000$</td></tr>
+            <tr><td class="name">Mega Yacht</td><td class="num">200 000$</td><td class="num">150 000$</td></tr>
+            <tr><td class="name">Toro</td><td class="num">10 000$</td><td class="num">7 000$</td></tr>
+            <tr><td class="name">Thrax</td><td class="num">50 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Entity MT</td><td class="num">35 000$</td><td class="num">—</td></tr>
+            <tr><td class="name">Virtue</td><td class="num">20 000$</td><td class="num">—</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div class="pricing-block">
+      <div class="pricing-block-head">
+        <h3>Tarif Entreprise — à l'heure</h3>
+        <p>Environ 1/10ᵉ du tarif 24h, applicable à tout véhicule de la flotte. Durée minimale 2h.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Véhicule</th><th class="num">Tarif horaire</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Volatus</td><td class="num">2 500$/h</td></tr>
+            <tr><td class="name">Swift Deluxe</td><td class="num">2 000$/h</td></tr>
+            <tr><td class="name">Vestra</td><td class="num">1 500$/h</td></tr>
+            <tr><td class="name">Mimbus</td><td class="num">3 000$/h</td></tr>
+            <tr><td class="name">Shamal</td><td class="num">2 500$/h</td></tr>
+            <tr><td class="name">Sea Ray L650 Express</td><td class="num">3 000$/h</td></tr>
+            <tr><td class="name">Mega Yacht</td><td class="num">20 000$/h</td></tr>
+            <tr><td class="name">Toro</td><td class="num">1 000$/h</td></tr>
+            <tr><td class="name">Thrax</td><td class="num">5 000$/h</td></tr>
+            <tr><td class="name">Entity MT</td><td class="num">3 500$/h</td></tr>
+            <tr><td class="name">Virtue</td><td class="num">2 000$/h</td></tr>
+          </tbody>
+        </table>
+      </div>
+      <p class="note">Montants indicatifs calculés sur la base validée (1/10ᵉ du tarif 24h), ajustables selon la politique interne.</p>
+    </div>
+
+    <div class="pricing-block">
+      <div class="pricing-block-head">
+        <h3>Tarif Tournage — Clip Rap — à l'heure</h3>
+        <p>Majoration de +25% sur le tarif entreprise horaire. Durée minimale 2h.</p>
+      </div>
+      <div class="table-scroll">
+        <table>
+          <thead><tr><th>Véhicule</th><th class="num">Tarif horaire</th></tr></thead>
+          <tbody>
+            <tr><td class="name">Volatus</td><td class="num">3 125$/h</td></tr>
+            <tr><td class="name">Swift Deluxe</td><td class="num">2 500$/h</td></tr>
+            <tr><td class="name">Vestra</td><td class="num">1 875$/h</td></tr>
+            <tr><td class="name">Mimbus</td><td class="num">3 750$/h</td></tr>
+            <tr><td class="name">Shamal</td><td class="num">3 125$/h</td></tr>
+            <tr><td class="name">Sea Ray L650 Express</td><td class="num">3 750$/h</td></tr>
+            <tr><td class="name">Mega Yacht</td><td class="num">25 000$/h</td></tr>
+            <tr><td class="name">Toro</td><td class="num">1 250$/h</td></tr>
+            <tr><td class="name">Thrax</td><td class="num">6 250$/h</td></tr>
+            <tr><td class="name">Entity MT</td><td class="num">4 375$/h</td></tr>
+            <tr><td class="name">Virtue</td><td class="num">2 500$/h</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+  </section>
+
+  <div class="arc-divider">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1"/>
+    </svg>
+  </div>
+
+  <section id="contact">
+    <div class="section-head">
+      <span class="eyebrow">Réservation</span>
+      <h2>Organiser votre location</h2>
+    </div>
+    <div class="contact-wrap">
+      <div class="contact-info">
+        <h3>Nous contacter</h3>
+        <p>Toute réservation se confirme avant mise à disposition du véhicule. Merci de préciser le créneau souhaité et le point de rendez-vous.</p>
+        <div class="contact-line"><span>Discord</span><span>à compléter</span></div>
+        <div class="contact-line"><span>Point de RDV</span><span>à compléter</span></div>
+        <div class="contact-line"><span>Disponibilité</span><span>24h/24 sur réservation</span></div>
+      </div>
+      <form onsubmit="event.preventDefault();">
+        <div class="field">
+          <label for="name">Nom / Pseudo RP</label>
+          <input id="name" type="text" placeholder="Votre nom">
+        </div>
+        <div class="field">
+          <label for="vehicle">Véhicule souhaité</label>
+          <select id="vehicle">
+            <option>Volatus</option><option>Swift Deluxe</option><option>Vestra</option>
+            <option>Mimbus</option><option>Shamal</option><option>Sea Ray L650 Express</option>
+            <option>Mega Yacht</option><option>Toro</option><option>Thrax</option>
+            <option>Entity MT</option><option>Virtue</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="formula">Formule</label>
+          <select id="formula">
+            <option>24h</option><option>Soirée (21h–4h)</option>
+            <option>Tarif Entreprise (horaire)</option><option>Tournage Clip Rap (horaire)</option>
+          </select>
+        </div>
+        <div class="field">
+          <label for="msg">Message</label>
+          <textarea id="msg" placeholder="Date, créneau, point de RDV..."></textarea>
+        </div>
+        <button type="submit" class="btn btn-solid">Envoyer la demande</button>
+      </form>
+    </div>
+  </section>
+
+</div>
+
+<footer>
+  <div class="brand">
+    <svg viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" width="26" height="26">
+      <path d="M50 8 A42 42 0 1 1 49.9 8" stroke="#c9a24c" stroke-width="1.4"/>
+      <text x="50" y="60" font-family="Jost, sans-serif" font-size="34" fill="#e6cf98" text-anchor="middle" font-weight="300">EP</text>
+    </svg>
+    <span style="font-family:'Jost',sans-serif;letter-spacing:0.3em;font-size:0.85rem;">ELITE&nbsp;PRESTIGE</span>
+  </div>
+  <p>Aérien · Terrestre · Maritime</p>
+  <p class="copy">Entreprise fictive — univers roleplay GTARP / FiveM</p>
+</footer>
+
+</body>
+</html>
